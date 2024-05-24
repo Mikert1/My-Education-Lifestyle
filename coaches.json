@@ -4,7 +4,9 @@
         "email": "among",
         "phoneNumber": "1234567890",
         "specialty": "",
-        "image": "us"
+        "image": "us",
+        "disabled": false
+        
 
     },
     {
@@ -12,13 +14,16 @@
         "email": "gnoma",
         "phoneNumber": "1214567890",
         "specialty": "",
-        "image": "su"
+        "image": "su",
+        "disabled": false
+
     },
     {
         "name": "Ngamo",
         "email": "ngamo",
         "phoneNumber": "1234567810",
         "specialty": "",
-        "image": "sus"
+        "image": "sus",
+        "disabled": false
     }
 ]
