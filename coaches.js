@@ -13,16 +13,17 @@ async function getData() {
     }
 }
 const promise = getData()
+const template = document.getElementById("coach");
 promise.then(data => {
     console.log(data.length)
     for (let i = 0; i < data.length; i++) {
         let cartDiv = document.createElement("div");
         cartDiv.classList.add("card");
-        cartDiv.innerHTML = `
-            <h3 class="cardName">${data[i].email}</h3>
-            <img src="" alt="${data[i].image}">
-            <p class="button">Afspraak maken</p>
-        `;
-        coachesDiv.appendChild(cartDiv);
+        const cartDivName = template.content.cloneNode(true);
+        console.log(data[i]);
+        cartDivName.querySelector("#naam").textContent = data[i].name;
+        cartDivName.querySelector("#image").src = data[i].image;
+        cartDivName.querySelector("#specialty").textContent = data[i].specialty;
+        document.body.appendChild(cartDivName);
     }
 })
