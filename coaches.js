@@ -20,7 +20,6 @@ promise.then(data => {
         let cartDiv = document.createElement("div");
         cartDiv.classList.add("card");
         const cartDivName = template.content.cloneNode(true);
-        console.log(data[i]);
         cartDivName.querySelector("#naam").textContent = data[i].name;
         cartDivName.querySelector("#image").src = data[i].image;
         cartDivName.querySelector("#specialty").textContent = data[i].specialty;
