@@ -54,9 +54,27 @@ nav img {
 
 object {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 .navbarObject {
     width: 100%;
     height: 90px;
+}
+
+/* education */
+
+#Bodycoach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sectioncoach { 
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: #51A7D8 solid 3px;
 }
