@@ -1,7 +1,7 @@
 coachesDiv = document.getElementById("coaches");
 async function getData() {
     try {
-        const response = await fetch('coaches.json');
+        const response = await fetch('src/coaches.json');
         if (!response.ok) {
             throw new Error('Failed to fetch');
         }
