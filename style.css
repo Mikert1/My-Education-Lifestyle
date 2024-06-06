@@ -7,7 +7,6 @@ body {
 }
 
 /* Navbar */
-
 nav {
     background-color: #76C5AF;
     padding: 0;
@@ -27,21 +26,20 @@ nav a {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1px;
-    display: block;
     transition: 0.5s;
     margin-left: 20px;
-        margin-top: 10px;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-        flex-wrap: wrap;
-        overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
-        width: 100%;
-        /* Ensure the list takes full width */
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    width: 100%;
+    position: absolute;
+    justify-content: flex-end;
 }
 
 nav li {
@@ -68,8 +66,47 @@ nav img {
 .menu-icon.rotate {
     transform: rotate(180deg);
 }
+@media (max-width: 1400px) {
+    nav a {
+        padding: 10px 10px;
+        margin-left: 2px;
+        font-size: 15px;
+    }
+    nav img {
+        width: auto;
+        height: 40px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 970px) {
+    nav a {
+        padding: 10px 10px;
+        margin-left: 2px;
+        font-size: 13px;
+    }
 
-@media (max-width: 768px) {
+    nav img {
+        width: auto;
+        height: 35px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 850px) {
+    nav a {
+        padding: 10px 1px;
+        font-size: 10px;
+    }
+
+    nav img {
+        width: auto;
+        height: 23px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 600px) {
     .nav-list {
         flex-direction: column;
         align-items: center;
@@ -88,15 +125,15 @@ nav img {
     nav ul {
         flex-direction: column;
         align-items: center;
+        position: static;
+        justify-content: start;
     }
 
     nav li {
         display: block;
-        margin-top: 1px;
+        margin-top: 20px;
         width: 100%;
-        /* Ensure each item takes full width */
-            text-align: center;
-            /* Center-align the items */
+        text-align: center;
         }
         
         .menu-icon {
@@ -112,6 +149,12 @@ nav img {
             height: 300px;
         }
 }
+
+object {
+    width: 100%;
+    height: 100%;
+}
+
 /* Footer */
 footer {
     background-color: #76C5AF;
