@@ -31,16 +31,36 @@ if ($_POST['password'] !== $password) {
     die;
 }
 
-//get every data from texts.json
-$texts = file_get_contents('src/texts.json');
-// echo json_encode($texts);
+$texts = json_decode(file_get_contents('src/texts.json'), true);
 
-// check if text is present
-$newContent = '';
-for ($i=1; $i < 5; $i++) {
-    if (($_POST[$i])) {
-        $newContent = $newContent . $_POST[$i] . $texts[$i];
-        //file_put_contents('text.json', $newText);
+// Check and update text if present in POST data
+for ($i = 1; $i < 5; $i++) {
+    if (isset($_POST[$i])) {
+        // Update the text in the array
+        $textExists = false;
+        foreach ($texts as &$text) {
+            if ($text['id'] == $i) {
+                $text['text'] = $_POST[$i];
+                $textExists = true;
+                break;
+            }
+        }
+        if (!$textExists) {
+            // Create a new text entry
+            $newText = [
+                'id' => $i,
+                'text' => $_POST[$i]
+            ];
+            $texts[] = $newText;
+        }
     }
 }
-echo $newContent;
+
+// Encode the array back to JSON
+$newText = json_encode($texts, JSON_PRETTY_PRINT);
+
+// Write the updated JSON back to the file
+file_put_contents('src/texts.json', $newText);
+
+// Output the updated JSON
+echo $newText;
