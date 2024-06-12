@@ -164,8 +164,6 @@ footer {
     position: relative;
     display: inline-block;
     width: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 .textimage {
@@ -199,6 +197,7 @@ footer {
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 2rem;
 }
 
 .image-container {
@@ -207,16 +206,21 @@ footer {
 
 .textimage2 {
     margin-bottom: 10rem;
+    width: 47.5%;
 }
 
 .textarea2 {
     margin-top: 17rem;
-    width: 100%;
+    width: 47.5%;
+    margin-left: 5%;
     border: black solid 3px;
 }
 
 .textarea3 {
-    margin-left: 10px;
+    margin-top: 17rem;
+    width: 47.5%;
+    margin-right: 5%;
+    border: black solid 3px;
 }
 
 .info3 {
