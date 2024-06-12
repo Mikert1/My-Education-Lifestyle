@@ -219,7 +219,19 @@ footer {
     font-size: 1rem;
     font-weight: 500;
     display: flex;
-    margin-left: 15rem;
+    margin-left: 15rem;;
+}
+.textimage2 {
+    height: auto;
+    width: 40rem;
+}
+.info2 {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    margin-left: 3rem;
+    margin-top: 4rem;
+
 }
 /* education */
 
