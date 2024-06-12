@@ -121,6 +121,143 @@ nav img {
     }
 }
 
+.navbarObject {
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbarObject.active {
+    height: 392px;
+}
+
+object {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #76C5AF;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    height: 100px;
+}
+
+.footerobject {
+    margin-top: auto;
+    height: 100px;
+}
+.bodyfooter{
+    display: flex;
+    justify-content: end;
+}
+
+/* Home */
+.maininfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.textimage {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 30rem;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.text-overlay h1,
+.text-overlay h3 {
+    margin: 0;
+}
+
+.info2 {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.image-container {
+    display: flex;
+}
+
+.textimage2 {
+    margin-bottom: 10rem;
+}
+
+.textarea2 {
+    margin-top: 17rem;
+    width: 100%;
+    border: black solid 3px;
+}
+
+.textarea3 {
+    margin-left: 10px;
+}
+
+.info3 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.textimage3 {
+    max-width: 100%;
+    height: auto;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+
+.textarea3 {
+    margin-left: 10px;
+}
+/* education */
+
+#Bodycoach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sectioncoach {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: #51A7D8 solid 3px;
+}
+
 @media (max-width: 600px) {
     .nav-list {
         flex-direction: column;
@@ -176,78 +313,16 @@ nav img {
         margin-left: 10px;
         margin-top: 10px;
     }
-}
-
-.navbarObject {
-    height: 100px;
-    transition: all 0.5s ease-in-out;
-}
-
-.navbarObject.active {
-    height: 392px;
-}
-
-object {
-    width: 100%;
-}
-
-/* Footer */
-footer {
-    background-color: #76C5AF;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-    height: 100px;
-}
-
-.footerobject {
-    margin-top: auto;
-    height: 100px;
-}
-.bodyfooter{
-    display: flex;
-    justify-content: end;
-}
-
-/* Home */
-.textimage {
-    height: auto;
-    width: 40rem;
-}
-.maininfo {
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    margin-left: 15rem;;
-}
-.textimage2 {
-    height: auto;
-    width: 40rem;
-}
-.info2 {
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    margin-left: 3rem;
-    margin-top: 4rem;
-
-}
-/* education */
-
-#Bodycoach {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#sectioncoach {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    color: black;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    border: #51A7D8 solid 3px;
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .info2 {
+        display: block;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }
