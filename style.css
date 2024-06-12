@@ -127,7 +127,7 @@ nav img {
 }
 
 .navbarObject.active {
-    height: 392px;
+
 }
 
 object {
@@ -316,6 +316,9 @@ footer {
         margin-left: 10px;
         margin-top: 10px;
     }
+    .navbarObject.active {
+        height: 392px;
+    }
     .image-container {
         position: relative;
         display: inline-block;
@@ -328,4 +331,30 @@ footer {
         margin-left: 10%;
         margin-right: 10%;
     }
+    .textimage2 {
+        width: 100%;
+        margin: 0%;
+    }
+    .textarea2 {
+        width: 100%;
+        margin-left: 0%;
+        border: black solid 3px;
+        margin: 0%;
+    }
+    .textarea3 {
+        width: 100%;
+        margin-right: 0%;
+        border: black solid 3px;
+        margin: 0%;
+    }
+    .textimage3 {
+        width: 100%;
+        margin: 0%;
+    }
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+    }
+
 }
