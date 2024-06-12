@@ -15,7 +15,7 @@ async function getData() {
 getData()
     .then(data => {
         let element;
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= data.length; i++) {
             if (document.getElementById(i)) {
                 element = document.getElementById(i);
                 for (let j = 0; j < data.length; j++) {
