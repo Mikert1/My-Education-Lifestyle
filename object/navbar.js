@@ -7,6 +7,7 @@ menuIcon.addEventListener('click', function () {
     navList.classList.toggle('active');
     menuIcon.classList.toggle('rotate');
     window.parent.document.getElementById('navbarObject').classList.toggle('active');
+    window.parent.document.getElementById('navbarObject').height = "500"
 });
 
 
