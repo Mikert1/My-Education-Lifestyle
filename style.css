@@ -309,7 +309,13 @@ footer {
     flex-direction: row;
 }
 
-#sectioncoach {
+#coach {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -318,6 +324,7 @@ footer {
     margin: 10px;
     border-radius: 10px;
     border: #51A7D8 solid 3px;
+    width: 225px;
 }
 
 .Coachobject {

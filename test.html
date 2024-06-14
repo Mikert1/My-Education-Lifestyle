@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>text update</title>
     <script src="src/test.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <form action="coaches.php" method="post">
+        <div id="coach">
+            <template id="coachTemplate">
+                <div class="card">
+                    <img id="image"></img>
+                    <h3 id="naam"></h3>
+                    <p id="specialty"></p>
+                    <p class="button">Edit</p>
+                </div>
+            </template>
+        </div>
+        <label for="password">Wachtwoord</label>
+        <input type="password" name="password" id="password">
+
+        <input type="submit" value="submit">
+    </form>
     <form action="test.php" method="post">
         <label for="1">ID: 1</label>
         <textarea name="1" id="1"></textarea><br>
