@@ -333,16 +333,17 @@ footer {
         margin: 0%;
     }
     .textarea2 {
-        width: 100%;
+        width: 99%;
         margin-left: 0%;
         border: black solid 3px;
         margin: 0%;
     }
     .textarea3 {
-        width: 100%;
+        width: 99%;
         margin-right: 0%;
         border: black solid 3px;
         margin: 0%;
+        margin-top: 3px;
     }
     .textimage3 {
         width: 100%;
