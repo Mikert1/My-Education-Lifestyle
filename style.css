@@ -341,11 +341,19 @@ footer {
 /* Formulier */
 .contactformulier {
     display: flex;
-    align-items: end;
-    flex-direction: column;
+    justify-content:space-evenly;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    margin-right: 10rem;
+}
+.contactformulier img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    border: #51A7D8 solid 3px;
+    border-radius: 2rem;
+
 }
 
 .contactformulier form {
