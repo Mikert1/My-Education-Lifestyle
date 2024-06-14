@@ -6,11 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Lifestyle Education | Education</title>
     <link rel="stylesheet" href="style.css">
+    <script src="src/texts.js" defer></script>
+
 </head>
 
 <body>
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
+    <div class="uitleg">
+        <h1 id="7"></h1>
+        <h3 id="8"></h3>
+    </div>
     <object data="object/coaches.html?specialty=Education" class="Coachobject" id="my-object"></object>
+    <div class="contactformulier">
+        <h2 id="9"></h2>
+        <form action="submit_form.php" method="post">
+            <div class="input">
+                <label for="name">Volledige naam:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+            </div>
+            <div class="input">
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="input">
+                <label for="phone">Telefoonnummer:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+            </div>
+            <div class="input">
+                <label for="birthday">Geboortedatum:</label><br>
+                <input type="date" id="birthday" name="birthday" required><br><br>
+            </div>
+            <div class="input">
+                <label for="location">Woonplaats:</label><br>
+                <input type="text" id="location" name="location" required><br><br>
+            </div>
+            <button type="button" onclick="this.innerHTML = 'Verstuurd'">Stuur op</button>
+        </form>
+
+    </div>
+    <object data="object/footer.html" class="footerobject"></object>
 </body>
 
 </html>
