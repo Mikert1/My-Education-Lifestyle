@@ -42,6 +42,13 @@ getData("coaches")
                 const cartDivName = template.content.cloneNode(true);
                 cartDivName.querySelector("#image").src = data[i].image;
                 cartDivName.querySelector("#naam").textContent = data[i].name;
+                cartDivName.querySelector("#specialty").textContent = data[i].specialty;
                 document.getElementById("coach").appendChild(cartDivName);
         }
+    })
+    .then(() => {
+        const addTemplate = document.getElementById("addTemplate");
+        const cartDivName = addTemplate.content.cloneNode(true);
+        cartDivName.querySelector(".card").style.height = "384.433px";
+        document.getElementById("coach").appendChild(cartDivName);
     })
