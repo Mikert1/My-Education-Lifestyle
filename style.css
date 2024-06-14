@@ -175,7 +175,7 @@ nav img {
             margin-top: 10px;
         }
         .navbarObject.active {
-        height: 392px;
+            height: 410px;
         }
         }
         
@@ -304,7 +304,14 @@ footer {
     align-items: center;
 }
 
-#sectioncoach {
+#coachesTemplate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -313,6 +320,7 @@ footer {
     margin: 10px;
     border-radius: 10px;
     border: #51A7D8 solid 3px;
+    width: 225px;
 }
 
 @media (max-width: 600px) {
