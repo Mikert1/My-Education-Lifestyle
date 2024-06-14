@@ -315,6 +315,9 @@ footer {
     border: #51A7D8 solid 3px;
 }
 
+.Coachobject {
+    height: 890px;
+}
 @media (max-width: 600px) {
     .image-container {
         position: relative;
