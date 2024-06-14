@@ -53,6 +53,3 @@ $newText = json_encode($texts, JSON_PRETTY_PRINT);
 file_put_contents('src/texts.json', $newText);
 
 echo $newText;
-
---
-
