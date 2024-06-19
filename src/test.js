@@ -53,6 +53,9 @@ getData("coaches")
         const newDiv = document.createElement("div");
         newDiv.classList.add("addCircle");
         newDiv.textContent = "+";
+        cartDivName.querySelector(".card").addEventListener("click", function() {
+            window.location.href = "edit.html";
+        });
         cartDivName.querySelector(".card").appendChild(newDiv);
         document.getElementById("coach").appendChild(cartDivName);
     })
