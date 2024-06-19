@@ -476,3 +476,22 @@ footer {
     }
 
 }
+/* admin */
+.addCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    background-color: #51A7D8;
+    border-radius: 50px;
+    color: white;
+    font-size: 3rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
