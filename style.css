@@ -341,10 +341,13 @@ footer {
 /* Formulier */
 .contactformulier {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
 }
+
 .contactformulier img {
     display: flex;
     align-items: center;
@@ -353,7 +356,6 @@ footer {
     height: auto;
     border: #51A7D8 solid 3px;
     border-radius: 2rem;
-
 }
 
 .contactformulier form {
