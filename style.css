@@ -29,38 +29,37 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 10px 0px;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1px;
     transition: 0.5s;
-    margin-left: 20px;
+    margin-left: 4rem;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
     width: 100%;
-    position: absolute;
     justify-content: flex-end;
+    padding: 0;
+    margin-right: 154px;
 }
 
 nav li {
     display: inline;
-    margin-right: 10px;
 }
 
 nav img {
     width: auto;
     height: 50px;
-    margin-left: 20px;
+    margin-left: 154px;
     margin-top: 10px;
+    position: absolute;
 }
 
 .menu-icon {
@@ -152,6 +151,7 @@ nav img {
 
     .menu-icon {
         display: block;
+        margin-right: 9.5rem;
     }
 
     .nav-list {
@@ -160,7 +160,7 @@ nav img {
     }
 
     .nav-list.active {
-        height: 300px;
+        height: 251px;
     }
 
     nav a {
@@ -172,8 +172,8 @@ nav img {
     nav img {
         width: auto;
         height: 40px;
-        margin-left: 10px;
-        margin-top: 10px;
+        margin-right: 9.5rem;
+        position: unset;
     }
 
     .navbarObject.active {
