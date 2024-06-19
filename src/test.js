@@ -50,5 +50,9 @@ getData("coaches")
         const addTemplate = document.getElementById("addTemplate");
         const cartDivName = addTemplate.content.cloneNode(true);
         cartDivName.querySelector(".card").style.height = "384.433px";
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("addCircle");
+        newDiv.textContent = "+";
+        cartDivName.querySelector(".card").appendChild(newDiv);
         document.getElementById("coach").appendChild(cartDivName);
     })
