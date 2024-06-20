@@ -1,24 +1,24 @@
 
 .editlayout {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    align-items: space-between;
     margin-top: 50px;
-    background-color: rgb(201, 201, 201);
     width: 80%;
     height: 1000px;
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.editimage {
+.editQuickinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     width: 47.5%;
     height: 100%;
-    background-color: rgb(170, 170, 170);
 }
-
 
 .editAll {
     display: flex;
@@ -26,8 +26,27 @@
     align-items: center;
     flex-direction: column;
     width: 47.5%;
-    height: 47.5%;
+    height: 100%;
     background-color: rgb(177, 177, 177);
+    border-radius: 10px;
+}
+
+.editimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 47.5%;
+    background-color: rgb(170, 170, 170);
+    border-radius: 10px;
+}
+
+.editimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .editImportant {
@@ -35,30 +54,32 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 47.5%;
+    width: 100%;
     height: 47.5%;
     background-color: rgb(177, 177, 177);
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 800px) {
     .editlayout {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
         margin-top: 50px;
-        background-color: rgb(201, 201, 201);
         width: 100%;
         margin-left: 0%;
         margin-right: 0%;
         height: 1000px;
     }
 
-    .editimage {
+    .editQuickinfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
         height: 100%;
-        background-color: rgb(170, 170, 170);
     }
 
     .editAll {
@@ -70,6 +91,13 @@
         height: 100%;
         background-color: rgb(177, 177, 177);
     }
+
+    .editimage {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(177, 177, 177);
+    }
+
 
     .editImportant {
         display: flex;
