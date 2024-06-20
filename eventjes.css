@@ -60,6 +60,10 @@
     border-radius: 10px;
 }
 
+#EDITDISABLE {
+
+}
+
 @media screen and (max-width: 800px) {
     .editlayout {
         display: flex;

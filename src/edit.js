@@ -1,4 +1,4 @@
-async function getData(type) {
+async function getData() {
     let response;
     try {
         response = await fetch('src/coaches.json');
@@ -15,7 +15,11 @@ async function getData(type) {
 const inputName = "naam1";
 const image = document.getElementById("EDITIMAGE");
 const source = document.getElementById("EDITSOURCE");
-getData("text")
+const name = document.getElementById("EDITNAME");
+const specialty = document.getElementById("EDITSPECIALTY");
+const disable = document.getElementById("EDITDISABLE");
+
+getData()
     .then(data => {
         for (let i = 0; i < data.length; i++) {
             const element = data[i];
@@ -23,6 +27,9 @@ getData("text")
                 console.log(data);
                 image.src = element.image;
                 source.value = element.image;
+                name.value = element.name;
+                specialty.value = element.specialty;
+                disable.value = element.disabled;
             }
         }
     })
