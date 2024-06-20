@@ -1,9 +1,18 @@
 /* Algemeen */
-body {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar */
@@ -13,45 +22,44 @@ nav {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 90px;
+    height: 100px;
     flex-wrap: wrap;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 10px 0px;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1px;
     transition: 0.5s;
-    margin-left: 20px;
+    margin-left: 4rem;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
     width: 100%;
-    position: absolute;
     justify-content: flex-end;
+    padding: 0;
+    margin-right: 154px;
 }
 
 nav li {
     display: inline;
-    margin-right: 10px;
 }
 
 nav img {
     width: auto;
     height: 50px;
-    margin-left: 20px;
+    margin-left: 154px;
     margin-top: 10px;
+    position: absolute;
 }
 
 .menu-icon {
@@ -66,12 +74,14 @@ nav img {
 .menu-icon.rotate {
     transform: rotate(180deg);
 }
+
 @media (max-width: 1400px) {
     nav a {
         padding: 10px 10px;
         margin-left: 2px;
         font-size: 15px;
     }
+
     nav img {
         width: auto;
         height: 40px;
@@ -79,6 +89,7 @@ nav img {
         margin-top: 10px;
     }
 }
+
 @media (max-width: 970px) {
     nav a {
         padding: 10px 10px;
@@ -93,6 +104,7 @@ nav img {
         margin-top: 10px;
     }
 }
+
 @media (max-width: 850px) {
     nav a {
         padding: 10px 1px;
@@ -106,6 +118,7 @@ nav img {
         margin-top: 10px;
     }
 }
+
 @media (max-width: 600px) {
     .nav-list {
         flex-direction: column;
@@ -134,25 +147,47 @@ nav img {
         margin-top: 20px;
         width: 100%;
         text-align: center;
-        }
-        
-        .menu-icon {
-            display: block;
-        }
-        
-        .nav-list {
-            height: 0px;
-            transition: all 0.5s ease-in-out;
-        }
-        
-        .nav-list.active {
-            height: 300px;
-        }
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 9.5rem;
+    }
+
+    .nav-list {
+        height: 0px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-list.active {
+        height: 251px;
+    }
+
+    nav a {
+        padding: 10px 10px;
+        margin-left: 2px;
+        font-size: 15px;
+    }
+
+    nav img {
+        width: auto;
+        height: 40px;
+        margin-right: 9.5rem;
+        position: unset;
+    }
+
+    .navbarObject.active {
+        height: 392px;
+    }
+}
+
+.navbarObject {
+    height: 100px;
+    transition: all 0.5s ease-in-out;
 }
 
 object {
     width: 100%;
-    height: 100%;
 }
 
 /* Footer */
@@ -160,19 +195,127 @@ footer {
     background-color: #76C5AF;
     color: #fff;
     text-align: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-
+    padding: 20px;
+    height: 100px;
 }
+
+.footerobject {
+    margin-top: auto;
+    height: 100px;
+}
+
+.bodyfooter {
+    display: flex;
+    justify-content: end;
+}
+
+/* Home */
+.maininfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.textimage {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 30rem;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.text-overlay h1,
+.text-overlay h3 {
+    margin: 0;
+}
+
+.info2 {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2rem;
+}
+
+.image-container {
+    display: flex;
+}
+
+.textimage2 {
+    margin-bottom: 10rem;
+    width: 47.5%;
+}
+
+.textarea2 {
+    margin-top: 17rem;
+    width: 47.5%;
+    margin-left: 5%;
+    border: black solid 3px;
+}
+
+.textarea3 {
+    margin-bottom: 20rem;
+    width: 47.5%;
+    margin-right: 5%;
+    border: black solid 3px;
+}
+
+.info3 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.textimage3 {
+    margin-top: 10rem;
+    width: 47.5%;
+    margin-bottom: 4rem;
+}
+
+.textarea3 {
+    margin-left: 10px;
+}
+
 /* education */
 
 #Bodycoach {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
-#sectioncoach { 
+
+#coach {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -181,4 +324,176 @@ footer {
     margin: 10px;
     border-radius: 10px;
     border: #51A7D8 solid 3px;
+    width: 225px;
+}
+
+.Coachobject {
+    height: 430px;
+}
+
+.uitleg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Formulier */
+.contactformulier {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contactformulier img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    border: #51A7D8 solid 3px;
+    border-radius: 2rem;
+}
+
+.contactformulier form {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    background-color: white;
+    width: 30rem;
+    border: #51A7D8 solid 3px;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.contactformulier h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 34rem;
+}
+.input {
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+}
+.input label {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 10rem;
+}
+.input input {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 20rem;
+    height: 2rem;
+    border: #51A7D8 solid 1px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}	
+.contactformulier form button {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #51A7D8;
+    border: #ffffff solid 3px;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-left: 12rem;
+}
+@media (max-width: 600px) {
+    #Bodycoach {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #sectioncoach {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        color: black;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        border: #51A7D8 solid 3px;
+    }
+
+    .Coachobject {
+        height: 1000px;
+    }
+}
+
+/* homepage mobile view */
+@media (max-width: 600px) {
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .info2 {
+        display: block;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .textimage2 {
+        width: 100%;
+        margin: 0%;
+    }
+
+    .textarea2 {
+        width: 99%;
+        margin-left: 0%;
+        border: black solid 3px;
+        margin: 0%;
+    }
+
+    .textarea3 {
+        width: 99%;
+        margin-right: 0%;
+        border: black solid 3px;
+        margin: 0%;
+        margin-top: 3px;
+    }
+
+    .textimage3 {
+        width: 100%;
+        margin: 0%;
+    }
+
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+    }
+
+}
+/* admin */
+.addCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    background-color: #51A7D8;
+    border-radius: 50px;
+    color: white;
+    font-size: 3rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
