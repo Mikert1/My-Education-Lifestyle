@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editing page</title>
     <link rel="stylesheet" href="eventjes.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="src/edit.js" defer></script>
 </head>
 <body>
     <div class="editlayout">
-        <div class="editImportant">
-            
+        <div class="editQuickinfo">
+            <div class="editimage">
+                <img id="EDITIMAGE" src="" alt="">
+            </div>
+            <div class="editImportant">
+                <label for="EDITNAME">Name</label>
+                <input id="EDITNAME"></input>
+                <label for="EDITSPECIALTY">specialty</label>
+                <input id="EDITSPECIALTY"></input>
+                <label for="EDITSOURCE">source</label>
+                <input type="text" id="EDITSOURCE"></input>
+            </div>
         </div>
         <div class="editAll">
-            
-        </div>
-        <div class="editimage">
-
+            <label for="EDITPHONE">Phone number</label>
+            <input id="EDITPHONE"></input>
+            <label for="EDITEMAIL">Email</label>
+            <input id="EDITEMAIL"></input>
+            <label for="EDITDISABLE">Disabled</label>
+            <input type="button" id="EDITDISABLE"></button>
         </div>
     </div>
 </body>
