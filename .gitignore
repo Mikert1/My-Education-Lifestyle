@@ -252,3 +252,4 @@ $RECYCLE.BIN/
 _NCrunch*
 **/.vs/
 **/obj/
+src/texts.json
