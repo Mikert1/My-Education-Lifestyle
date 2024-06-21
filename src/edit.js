@@ -18,6 +18,8 @@ const source = document.getElementById("EDITSOURCE");
 const name = document.getElementById("EDITNAME");
 const specialty = document.getElementById("EDITSPECIALTY");
 const disable = document.getElementById("EDITDISABLE");
+const phone = document.getElementById("EDITPHONE");
+const email = document.getElementById("EDITEMAIL");
 
 getData()
     .then(data => {
@@ -29,7 +31,13 @@ getData()
                 source.value = element.image;
                 name.value = element.name;
                 specialty.value = element.specialty;
+                phone.value = element.phoneNumber;
+                email.value = element.email;
                 disable.value = element.disabled;
+                disable.addEventListener("click", () => {
+                    element.disabled = !element.disabled;
+                    disable.value = element.disabled;
+                });
             }
         }
     })
