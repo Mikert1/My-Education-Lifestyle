@@ -36,7 +36,12 @@ promise.then(data => {
     for (let i = 0; i < data.length; i++) {
         if (params.specialty == data[i].specialty) {
             let cartDiv = document.createElement("div");
-            cartDiv.classList.add("card");
+            if (data.length == 1) {
+                cartDiv.classList.add("singelcard");
+            }
+            else {
+                cartDiv.classList.add("morecards");
+            }
             const cartDivName = template.content.cloneNode(true);
             cartDivName.querySelector("#naam").textContent = data[i].name;
             cartDivName.querySelector("#image").src = data[i].image;

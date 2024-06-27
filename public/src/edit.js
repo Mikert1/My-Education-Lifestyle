@@ -28,10 +28,10 @@ let params = getQueryParams();
 if (params.name) {
     console.log(params.name);
 } else {
-    console.log("No specialty provided");
+    console.log("No name provided");
 }
 
-const inputName = "naam1";
+const inputName = params.name;
 const image = document.getElementById("EDITIMAGE");
 const source = document.getElementById("EDITSOURCE");
 const name = document.getElementById("EDITNAME");
