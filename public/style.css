@@ -557,3 +557,16 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #51A7D8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}

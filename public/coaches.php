@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo 'Method not allowed';	
@@ -15,7 +15,7 @@ if (!isset($_POST['password'])) {
     die;
 }
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 $password = $_ENV['FILE_UPLOAD_PASSWORD'];
