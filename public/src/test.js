@@ -42,7 +42,7 @@ getData("coaches")
             const element = data[i];
                 const cartDivName = template.content.cloneNode(true);
                 cartDivName.querySelector(".card").addEventListener("click", function() {
-                    window.location.href = `edit.html?param=${element.name}`;
+                    window.location.href = `edit.html?name=${element.name}`;
                 });
                 cartDivName.querySelector("#image").src = data[i].image;
                 cartDivName.querySelector("#naam").textContent = data[i].name;
@@ -58,7 +58,7 @@ getData("coaches")
         newDiv.classList.add("addCircle");
         newDiv.textContent = "+";
         cartDivName.querySelector(".card").addEventListener("click", function() {
-            window.location.href = "edit.html?param=" + "new";
+            window.location.href = "edit.html?name=" + "new";
         });
         cartDivName.querySelector(".card").appendChild(newDiv);
         document.getElementById("coach").appendChild(cartDivName);
