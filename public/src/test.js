@@ -39,7 +39,11 @@ const template = document.getElementById("coachTemplate");
 getData("coaches")
     .then(data => {
         for (var i = 0; i < data.length; i++) {
+            const element = data[i];
                 const cartDivName = template.content.cloneNode(true);
+                cartDivName.querySelector(".card").addEventListener("click", function() {
+                    window.location.href = `edit.html?param=${element.name}`;
+                });
                 cartDivName.querySelector("#image").src = data[i].image;
                 cartDivName.querySelector("#naam").textContent = data[i].name;
                 cartDivName.querySelector("#specialty").textContent = data[i].specialty;
@@ -54,7 +58,7 @@ getData("coaches")
         newDiv.classList.add("addCircle");
         newDiv.textContent = "+";
         cartDivName.querySelector(".card").addEventListener("click", function() {
-            window.location.href = "edit.html?param=value";
+            window.location.href = "edit.html?param=" + "new";
         });
         cartDivName.querySelector(".card").appendChild(newDiv);
         document.getElementById("coach").appendChild(cartDivName);
