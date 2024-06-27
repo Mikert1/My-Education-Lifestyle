@@ -124,7 +124,7 @@ nav img {
         flex-direction: column;
         align-items: center;
     }
-
+    
     nav {
         height: auto;
         flex-direction: column;
@@ -287,8 +287,6 @@ footer {
 
 .reverse video {
     display: flex;
-    justify-content: end;
-    align-items: end;
     margin-bottom: 20rem;
     position: absolute;
     right: 10%;
@@ -296,11 +294,13 @@ footer {
     width: 39%;
     border-radius: 3rem;
 }
+
 .reverse {
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 2rem;
-}	
+}
+
 /* education */
 
 #Bodycoach {
@@ -361,63 +361,94 @@ footer {
 
 .contactformulier form {
     display: flex;
-    align-items: start;
     flex-direction: column;
     background-color: white;
-    width: 30rem;
+    width: 100%;
+    max-width: 30rem;
     border: #51A7D8 solid 3px;
     border-radius: 2rem;
     padding: 2rem;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
+
 .contactformulier h2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 34rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
+
 .input {
     display: flex;
-    align-items: start;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
 }
+
 .input label {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    width: 10rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
 }
+
 .input input {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    width: 20rem;
+    width: 100%;
     height: 2rem;
     border: #51A7D8 solid 1px;
     border-radius: 1rem;
     margin-bottom: 1rem;
     text-align: center;
-}	
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
 .contactformulier form button {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     background-color: #51A7D8;
     border: #ffffff solid 3px;
     border-radius: 2rem;
     padding: 1rem;
-    margin-left: 12rem;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
 }
+
+@media (min-width: 600px) {
+    .contactformulier form {
+        width: 30rem;
+    }
+
+    .input {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .input label {
+        width: 10rem;
+        margin-bottom: 0;
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .input input {
+        width: calc(100% - 10rem);
+    }
+
+    .contactformulier form button {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 600px) {
     #Bodycoach {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
+        margin-left: 10rem;
     }
-
+    
     #sectioncoach {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         background-color: #ffffff;
         color: black;
         padding: 10px;
@@ -425,9 +456,27 @@ footer {
         border-radius: 10px;
         border: #51A7D8 solid 3px;
     }
-
+    
     .Coachobject {
-        height: 1000px;
+        height: 29rem;
+    }
+    .contactformulier {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .contactformulier img {
+        width: 100%;
+        margin: 0%;
+    }
+    .form {
+        min-width: 20rem;
+        max-width: 10rem;
     }
 }
 
@@ -440,36 +489,41 @@ footer {
         margin-left: 0%;
         margin-right: 0%;
     }
-
+    
     .info2 {
         display: block;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
-
+    
     .textimage2 {
         width: 100%;
         margin: 0%;
     }
-
+    
     .textarea2 {
-        min-width: 330px;
+        min-width: fit-content;
+        max-width: fit-content;
         margin-left: 0%;
-        border: black solid 3px;
-        margin: 0%;
-        min-height: 50rem;
+        min-height: fit-content;
+        max-height: fit-content;
+        margin-top: 1rem;
     }
 
     .textarea3 {
-        width: 99%;
-        margin-right: 0%;
-        border: black solid 3px;
-        margin: 0%;
-        margin-top: 3px;
+        min-width: 10px;
+        max-width: fit-content;
+
     }
 
-    .textimage3 {
-       min-width: 30rem
+    .reverse video {
+        display: flex;
+        position: relative;
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0%;
+        right: 0rem;
+        margin-bottom: 2rem;
     }
 
     .reverse {
@@ -477,8 +531,13 @@ footer {
         flex-direction: column-reverse;
         margin-bottom: 2rem;
     }
-
+    .footerobject {
+        margin-top: 0px;
+        width: 100%;
+    }
+       
 }
+
 /* admin */
 .addCircle {
     display: flex;
@@ -497,4 +556,17 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #51A7D8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
 }
