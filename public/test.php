@@ -15,7 +15,7 @@ if (!isset($_POST['password'])) {
     die;
 }
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 $password = $_ENV['FILE_UPLOAD_PASSWORD'];
