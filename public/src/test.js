@@ -54,7 +54,7 @@ getData("coaches")
         newDiv.classList.add("addCircle");
         newDiv.textContent = "+";
         cartDivName.querySelector(".card").addEventListener("click", function() {
-            window.location.href = "edit.html";
+            window.location.href = "edit.html?param=value";
         });
         cartDivName.querySelector(".card").appendChild(newDiv);
         document.getElementById("coach").appendChild(cartDivName);
