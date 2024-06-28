@@ -9,22 +9,22 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     die;
 }
 
-// if (!isset($_POST['password'])) {
-//     echo 'Password is required';
-//     http_response_code(400);
-//     die;
-// }
+if (!isset($_POST['password'])) {
+    echo 'Password is required';
+    http_response_code(400);
+    die;
+}
 
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-// $dotenv->load();
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
 
-// $password = $_ENV['FILE_UPLOAD_PASSWORD'];
+$password = $_ENV['FILE_UPLOAD_PASSWORD'];
 
-// if ($_POST['password'] !== $password) {
-//     echo 'Password is incorrect';
-//     http_response_code(401);
-//     die;
-// }
+if ($_POST['password'] !== $password) {
+    echo 'Password is incorrect';
+    http_response_code(401);
+    die;
+}
 
 $texts = json_decode(file_get_contents('src/coaches.json'), true);
 $arrayList = ["EDITNAME", "EDITSPECIALTY", "EDITSOURCE", "EDITPHONE", "EDITEMAIL", "EDITDISABLE"];
@@ -38,7 +38,6 @@ for ($i = 1; $i <= 3; $i++) {
             $texts[$j]["phoneNumber"] = $_POST["EDITPHONE"];
             $texts[$j]["email"] = $_POST["EDITEMAIL"];
             $texts[$j]["disabled"] = $_POST["EDITDISABLE"];
-            echo $texts[$j]["name"];
         }
     }
 }
