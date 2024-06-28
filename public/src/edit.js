@@ -72,6 +72,30 @@ getData()
                 );
             }
         }
+        if (inputId == "new") {
+            image.src = "https://via.placeholder.com/150";
+            source.value = "https://via.placeholder.com/150";
+            name.value = "";
+            specialty.value = "";
+            phone.value = "";
+            email.value = "";
+            disable.value = false;
+            id.value = "new";
+            disable.addEventListener("click", () => {
+                disable.value = !disable.value;
+            });
+            save.addEventListener("click", () => {
+                data.push({
+                    id: id.value,
+                    image: source.value,
+                    name: name.value,
+                    specialty: specialty.value,
+                    phoneNumber: phone.value,
+                    email: email.value,
+                    disabled: disable.value
+                });
+            });
+        }
     })
     .catch(error => {
         console.error('Error fetching:', error);

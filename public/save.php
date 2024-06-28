@@ -41,6 +41,25 @@ for ($i = 1; $i <= 3; $i++) {
         }
     }
 }
+if ($_POST["EDITID"] == "new") {
+    $newId = 0;
+    for ($i = 0; $i < count($texts); $i++) {
+        if ($texts[$i]["id"] > $newId) {
+            $newId = $texts[$i]["id"];
+        }
+    }
+    $newCoach = [
+        "id" => $newId,
+        "name" => $_POST["EDITNAME"],
+        "specialty" => $_POST["EDITSPECIALTY"],
+        "image" => $_POST["EDITSOURCE"],
+        "phoneNumber" => $_POST["EDITPHONE"],
+        "email" => $_POST["EDITEMAIL"],
+        "disabled" => $_POST["EDITDISABLE"]
+    ];
+
+    array_push($texts, $newCoach);
+}
 
 $newText = json_encode($texts, JSON_PRETTY_PRINT);
 
