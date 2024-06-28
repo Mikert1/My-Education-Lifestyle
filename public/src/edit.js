@@ -25,13 +25,14 @@ function getQueryParams() {
 }
 
 let params = getQueryParams();
-if (params.name) {
-    console.log(params.name);
+if (params.id) {
+    console.log(params.id);
 } else {
     console.log("No name provided");
 }
 
-const inputName = params.name;
+const inputId = params.id;
+const id = document.getElementById("EDITID");
 const image = document.getElementById("EDITIMAGE");
 const source = document.getElementById("EDITSOURCE");
 const name = document.getElementById("EDITNAME");
@@ -45,7 +46,7 @@ getData()
     .then(data => {
         for (let i = 0; i < data.length; i++) {
             const element = data[i];
-            if (element.name == inputName) {
+            if (element.id == inputId) {
                 console.log(data);
                 image.src = element.image;
                 source.value = element.image;
@@ -54,6 +55,7 @@ getData()
                 phone.value = element.phoneNumber;
                 email.value = element.email;
                 disable.value = element.disabled;
+                id.value = element.id;
                 disable.addEventListener("click", () => {
                     element.disabled = !element.disabled;
                     disable.value = element.disabled;
@@ -66,21 +68,6 @@ getData()
                     element.email = email.value;
                     element.disabled = disable.value;
                     data[i] = element;
-                    // give php waht it need to save data to json so i can do $data = json_decode($_POST['data'], true);
-                    const formData = new FormData();
-                    formData.append('data', JSON.stringify(data));
-                    fetch('src/save.php', {
-                        method: 'POST',
-                        body: formData
-                    }).then(response => {
-                        if (!response.ok) {
-                            throw new Error('Failed to save');
-                        }
-                        alert("Saved");
-                    }).catch(error => {
-                        console.error('Error saving:', error);
-                        throw error;
-                    });
                     }
                 );
             }

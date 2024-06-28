@@ -1,23 +1,49 @@
+<!DOCTYPE html>
 <?php
 
-// Get the data from the request
-$data = json_decode($_POST['data'], true);
+require __DIR__ . '/../vendor/autoload.php';
 
-// Read the existing coaches data from the file
-$coachesData = file_get_contents('coaches.json');
-$coaches = json_decode($coachesData, true);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo 'Method not allowed';	
+    http_response_code(405);
+    die;
+}
 
-// Add the new data to the coaches array
-$coaches[] = $data;
+if (!isset($_POST['password'])) {
+    echo 'Password is required';
+    http_response_code(400);
+    die;
+}
 
-// Convert the coaches array back to JSON
-$coachesData = json_encode($coaches);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
 
-// Save the updated coaches data to the file
-file_put_contents('coaches.json', $coachesData);
+$password = $_ENV['FILE_UPLOAD_PASSWORD'];
 
-// Send a response back to the client
-$response = ['message' => 'Data saved successfully'];
-echo json_encode($response);
+if ($_POST['password'] !== $password) {
+    echo 'Password is incorrect';
+    http_response_code(401);
+    die;
+}
 
-?>
+$texts = json_decode(file_get_contents('src/coaches.json'), true);
+$arrayList = ["EDITNAME", "EDITSPECIALTY", "EDITSOURCE", "EDITPHONE", "EDITEMAIL", "EDITDISABLE"];
+
+for ($i = 1; $i <= 3; $i++) {
+    for ($j = 0; $j < count($texts); $j++) {
+        if ($texts[$j]["id"] == $_POST["EDITID"]) {
+            $texts[$j]["name"] = $_POST["EDITNAME"];
+            $texts[$j]["specialty"] = $_POST["EDITSPECIALTY"];
+            $texts[$j]["image"] = $_POST["EDITSOURCE"];
+            $texts[$j]["phoneNumber"] = $_POST["EDITPHONE"];
+            $texts[$j]["email"] = $_POST["EDITEMAIL"];
+            $texts[$j]["disabled"] = $_POST["EDITDISABLE"];
+        }
+    }
+}
+
+$newText = json_encode($texts, JSON_PRETTY_PRINT);
+
+file_put_contents('src/coaches.json', $newText);
+
+echo $newText;

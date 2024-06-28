@@ -15,21 +15,27 @@
                     <img id="EDITIMAGE" src="" alt="">
                 </div>
                 <div class="editImportant">
+                    <input type="hidden" name="EDITID" id="EDITID">
                     <label for="EDITNAME">Name</label>
-                    <input id="EDITNAME"></input>
+                    <input name="EDITNAME" id="EDITNAME"></input>
                     <label for="EDITSPECIALTY">specialty</label>
-                    <input id="EDITSPECIALTY"></input>
+                    <select name="EDITSPECIALTY" id="EDITSPECIALTY">
+                        <option value="Mental health">Mental health</option>
+                        <option value="Education">Education</option>
+                    </select>
                     <label for="EDITSOURCE">source</label>
-                    <input type="text" id="EDITSOURCE"></input>
+                    <input name="EDITSOURCE" type="text" id="EDITSOURCE"></input>
                 </div>
             </div>
             <div class="editAll">
                 <label for="EDITPHONE">Phone number</label>
-                <input id="EDITPHONE">
+                <input name="EDITPHONE" id="EDITPHONE">
                 <label for="EDITEMAIL">Email</label>
-                <input id="EDITEMAIL">
+                <input name="EDITEMAIL" id="EDITEMAIL">
                 <label for="EDITDISABLE">Disabled</label>
-                <input type="button" id="EDITDISABLE">
+                <input name="EDITDISABLE" type="button" id="EDITDISABLE">
+                <label for="password">Password</label>
+                <input type="password" name="password">
                 <label for="EDITSAVE">Save Changes</label>
                 <input type="submit" id="EDITSAVE" value="Save">
             </div>
