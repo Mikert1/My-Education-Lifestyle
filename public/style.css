@@ -124,8 +124,12 @@ nav img {
     .nav-list {
         flex-direction: column;
         align-items: center;
+        height: 5rem;
     }
-    
+        .navbarObject {
+            min-height: 179px;
+            transition: all 0.5s ease-in-out;
+        }
     nav {
         height: auto;
         flex-direction: column;
@@ -161,7 +165,7 @@ nav img {
     }
 
     .nav-list.active {
-        height: 251px;
+        height: 261px;
     }
 
     nav a {
@@ -175,10 +179,11 @@ nav img {
         height: 40px;
         margin-right: 9.5rem;
         position: unset;
+        margin-top: 3rem;
     }
 
     .navbarObject.active {
-        height: 392px;
+        height: 440px;
     }
 }
 
@@ -229,6 +234,7 @@ footer {
     width: 100%;
     object-fit: cover;
     max-height: 30rem;
+    top: 0%;
 }
 
 .text-overlay {
@@ -439,12 +445,10 @@ footer {
 }
 
 @media (max-width: 600px) {
-    #Bodycoach {
+    .Bodycoach {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
         flex-direction: row;
-        margin-left: 10rem;
     }
     
     #sectioncoach {
@@ -472,7 +476,7 @@ footer {
         margin-right: 0%;
     }
     .contactformulier img {
-        width: 100%;
+        width: calc(100% - 5px);
         margin: 0%;
     }
     .form {
