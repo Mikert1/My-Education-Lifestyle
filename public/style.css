@@ -75,7 +75,9 @@ nav img {
 .menu-icon.rotate {
     transform: rotate(180deg);
 }
-
+ nav a:hover {
+     color: #51A7D8;
+ }
 @media (max-width: 1400px) {
     nav a {
         padding: 10px 10px;
@@ -126,10 +128,12 @@ nav img {
         align-items: center;
         height: 5rem;
     }
-        .navbarObject {
-            min-height: 179px;
-            transition: all 0.5s ease-in-out;
-        }
+
+    .navbarObject {
+        min-height: 179px;
+        transition: all 0.5s ease-in-out;
+    }
+
     nav {
         height: auto;
         flex-direction: column;
@@ -185,6 +189,7 @@ nav img {
     .navbarObject.active {
         height: 440px;
     }
+   
 }
 
 .navbarObject {
@@ -201,9 +206,7 @@ footer {
     background-color: #76C5AF;
     color: #fff;
     text-align: center;
-    width: 100%;
-    padding: 20px;
-    height: 100px;
+    padding: 2rem;
 }
 
 .footerobject {
@@ -211,9 +214,64 @@ footer {
     height: 100px;
 }
 
-.bodyfooter {
+
+footer img {
+    width: auto;
+    height: 50px;
+}
+
+.footernavigation {
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.footernavigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.footernavigation a:hover {
+    color: #51A7D8;
+
+}
+
+footer li {
+    display: inline;
+}
+
+.footernavigation ul {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 1rem;
+}
+
+
+.icon svg {
+    transition: fill 0.3s;
+    fill: #fff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.icon:hover svg {
+    fill: #51A7D8;
+
+}
+
+.footerobject {
+    margin-top: 0px;
+    width: 100%;
+    height: 16.36rem;
 }
 
 /* Home */
@@ -450,7 +508,7 @@ footer {
         justify-content: start;
         flex-direction: row;
     }
-    
+
     #sectioncoach {
         display: flex;
         flex-direction: row;
@@ -461,10 +519,11 @@ footer {
         border-radius: 10px;
         border: #51A7D8 solid 3px;
     }
-    
+
     .Coachobject {
         height: 29rem;
     }
+
     .contactformulier {
         display: flex;
         justify-content: center;
@@ -475,10 +534,12 @@ footer {
         margin-left: 0%;
         margin-right: 0%;
     }
+
     .contactformulier img {
         width: calc(100% - 5px);
         margin: 0%;
     }
+
     .form {
         min-width: 20rem;
         max-width: 10rem;
@@ -494,18 +555,18 @@ footer {
         margin-left: 0%;
         margin-right: 0%;
     }
-    
+
     .info2 {
         display: block;
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    
+
     .textimage2 {
         width: 100%;
         margin: 0%;
     }
-    
+
     .textarea2 {
         min-width: fit-content;
         max-width: fit-content;
@@ -536,11 +597,26 @@ footer {
         flex-direction: column-reverse;
         margin-bottom: 2rem;
     }
-    .footerobject {
-        margin-top: 0px;
-        width: 100%;
+
+    .footernavigation {
+        display: none;
     }
-       
+
+    footer svg {
+        margin-top: 2rem;
+    }
+
+    footer a {
+        text-decoration: none;
+
+    }
+    .icon-container {
+        border-top: #fff solid 2px;
+        margin-top: 2rem;
+    }
+    .footerobject {
+        max-height: 14.15rem;
+    }
 }
 
 /* admin */
