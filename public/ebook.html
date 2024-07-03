@@ -10,7 +10,14 @@
 </head>
 <body>
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
-    <embed id="pdfViewer" width="500" height="375" 
+    <embed id="pdfViewer" width="500" height="100%" 
     type="application/pdf">
+    <div>
+        <button onclick="NextPage('next')">></button>
+        <p id="PageNumber"></p>
+        <p>/</p>
+        <p id="TotalPages"></p>
+        <button onclick="NextPage('prev')">prev</button>
+    </div>
 </body>
 </html>
