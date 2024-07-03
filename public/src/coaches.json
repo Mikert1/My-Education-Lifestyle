@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "nieuwe naam 2",
-        "email": "email3",
+        "name": "nieuwe naam 1",
+        "email": "email3@wfgsi",
         "phoneNumber": "1234567810",
         "specialty": "Education",
         "disabled": null,
@@ -10,10 +10,10 @@
     },
     {
         "id": 2,
-        "name": "naam2659",
-        "email": "email3",
+        "name": "test 2",
+        "email": "email3dutdud@fifujf",
         "phoneNumber": "1234567810",
-        "specialty": "Mental health",
+        "specialty": "Education",
         "disabled": null,
         "image": "https:\/\/via.placeholder.com\/150"
     },
@@ -27,39 +27,12 @@
         "image": "https:\/\/via.placeholder.com\/150"
     },
     {
-        "id": 8,
-        "name": "df",
-        "specialty": "Mental health",
+        "id": 4,
+        "name": "wetg",
+        "specialty": "Education",
         "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "df",
-        "email": "email3@aef",
-        "disabled": null
-    },
-    {
-        "id": 8,
-        "name": "df",
-        "specialty": "Mental health",
-        "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "df",
-        "email": "email3@aef",
-        "disabled": null
-    },
-    {
-        "id": 8,
-        "name": "df",
-        "specialty": "Mental health",
-        "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "df",
-        "email": "email3@aef",
-        "disabled": null
-    },
-    {
-        "id": 8,
-        "name": "1st",
-        "specialty": "Mental health",
-        "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "aseg",
-        "email": "esdbvihbv@jsv.sdhgv",
-        "disabled": null
+        "phoneNumber": "12345t5",
+        "email": "1245@dfnbfd.cfhb",
+        "disabled": "false"
     }
 ]

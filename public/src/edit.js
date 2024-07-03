@@ -56,10 +56,6 @@ getData()
                 email.value = element.email;
                 disable.value = element.disabled;
                 id.value = element.id;
-                disable.addEventListener("click", () => {
-                    element.disabled = !element.disabled;
-                    disable.value = element.disabled;
-                });
                 save.addEventListener("click", () => {
                     element.image = source.value;
                     element.name = name.value;
@@ -81,20 +77,6 @@ getData()
             email.value = "";
             disable.value = false;
             id.value = "new";
-            disable.addEventListener("click", () => {
-                disable.value = !disable.value;
-            });
-            save.addEventListener("click", () => {
-                data.push({
-                    id: id.value,
-                    image: source.value,
-                    name: name.value,
-                    specialty: specialty.value,
-                    phoneNumber: phone.value,
-                    email: email.value,
-                    disabled: disable.value
-                });
-            });
         }
     })
     .catch(error => {
