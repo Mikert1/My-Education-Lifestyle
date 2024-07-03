@@ -200,6 +200,42 @@ nav img {
 object {
     width: 100%;
 }
+.aboutus {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+.abouttext {
+    width: 40%;
+    border: #51A7D8 solid 3px;
+    margin-right: 1rem;
+    border-radius: 3rem;
+    padding: 1rem;
+
+}
+.aboutus img {
+    width: 40%;
+    height: auto;
+    margin-left: 1rem;
+    border-radius: 3rem;
+}
+.contact {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+.contacttext {
+    width: auto;
+    height: auto;
+    border: #51A7D8 solid 3px;
+    margin-right: 1rem;
+    border-radius: 3rem;
+    padding: 1rem;
+
+}
 
 /* Footer */
 footer {
@@ -212,6 +248,7 @@ footer {
 .footerobject {
     margin-top: auto;
     height: 100px;
+
 }
 
 
@@ -418,7 +455,7 @@ footer li {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: auto;
+    width: 50%;
     height: auto;
     border: #51A7D8 solid 3px;
     border-radius: 2rem;
