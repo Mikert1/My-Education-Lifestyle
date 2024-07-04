@@ -14,15 +14,6 @@
         "email": "email3dutdud@fifujf",
         "phoneNumber": "1234567810",
         "specialty": "Education",
-        "disabled": true,
-        "image": "https:\/\/via.placeholder.com\/150"
-    },
-    {
-        "id": 3,
-        "name": "Nieuwe naam",
-        "email": "email3@gmail.com",
-        "phoneNumber": "1234567810",
-        "specialty": "Mental health",
         "disabled": false,
         "image": "https:\/\/via.placeholder.com\/150"
     },
@@ -34,5 +25,32 @@
         "phoneNumber": "12345t5",
         "email": "1245@dfnbfd.cfhb",
         "disabled": true
+    },
+    {
+        "id": 5,
+        "name": "hippopotomonstrosesquippedaliophobia",
+        "specialty": "Mental health",
+        "image": "https:\/\/via.placeholder.com\/150",
+        "phoneNumber": "321231",
+        "email": "1@gmail.com",
+        "disabled": "false"
+    },
+    {
+        "id": 0,
+        "name": "F\u00e1bio Dani\u00ebl Melo Salvador",
+        "specialty": "Education",
+        "image": "https:\/\/via.placeholder.com\/150",
+        "phoneNumber": "911",
+        "email": "khjghfgfd@gmail.com",
+        "disabled": null
+    },
+    {
+        "id": 3,
+        "name": "1st",
+        "specialty": "Mental health",
+        "image": "https:\/\/via.placeholder.com\/150",
+        "phoneNumber": "12345t5",
+        "email": "1@gmail.com",
+        "disabled": null
     }
 ]

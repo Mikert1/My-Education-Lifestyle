@@ -44,6 +44,10 @@ getData("coaches")
                 cartDivName.querySelector(".card").addEventListener("click", function() {
                     window.location.href = `edit.html?id=${element.id}`;
                 });
+                if (data[i].disabled == true) {
+                    cartDivName.querySelector(".card").style.borderColor = "red";
+                    cartDivName.querySelector(".button").style.backgroundColor = "red";
+                }
                 cartDivName.querySelector("#image").src = data[i].image;
                 cartDivName.querySelector("#naam").textContent = data[i].name;
                 cartDivName.querySelector("#specialty").textContent = data[i].specialty;

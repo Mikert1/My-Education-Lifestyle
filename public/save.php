@@ -35,41 +35,39 @@ for ($j = 0; $j < count($texts); $j++) {
         $texts[$j]["image"] = $_POST["EDITSOURCE"];
         $texts[$j]["phoneNumber"] = $_POST["EDITPHONE"];
         $texts[$j]["email"] = $_POST["EDITEMAIL"];
-        $texts[$j]["disabled"] = ($_POST["EDITDISABLE"] == "Disabled");
-        echo $_POST["EDITDELETE"];
-        if ($_POST["EDITDELETE"] == "true") {
+        $texts[$j]["disabled"] = (isset($_POST["EDITDISABLE"]) == "Disabled");
+        echo isset($_POST["EDITDELETE"]);
+        echo $_POST["EDITDELETE"] == "true";
+        if (isset($_POST["EDITDELETE"]) == "true") {
+            echo "deleted coach";
             unset($texts[$j]);
             $texts = array_values($texts);
-            echo "deleted coach";
         }
     }
 }
 if ($_POST["EDITID"] == "new") {
     $newId = 0;
+    $existingIds = [];
     foreach ($texts as $text) {
-        if ($text["id"] > $newId) {
-            $newId = $text["id"] + 1;
+        $existingIds[] = $text["id"];
+    }
+
+    for ($i = 0; $i <= count($texts); $i++) {
+        if (!in_array($i, $existingIds)) {
+            $newId = $i;
+            break;
         }
     }
-    if ($_POST["EDITDELETE"] == "true") {
-        for ($j = 0; $j < count($texts); $j++) {
-            if ($texts[$j]["id"] == $_POST["EDITID"]) {
-                unset($texts[$j]);
-                $texts = array_values($texts);
-            }
-        }
-    } else {
-        $newCoach = [
-            "id" => $newId,
-            "name" => $_POST["EDITNAME"],
-            "specialty" => $_POST["EDITSPECIALTY"],
-            "image" => $_POST["EDITSOURCE"],
-            "phoneNumber" => $_POST["EDITPHONE"],
-            "email" => $_POST["EDITEMAIL"],
-            "disabled" => $_POST["EDITDISABLE"]
-        ];
-        array_push($texts, $newCoach);
-    }
+    $newCoach = [
+        "id" => $newId,
+        "name" => $_POST["EDITNAME"],
+        "specialty" => $_POST["EDITSPECIALTY"],
+        "image" => $_POST["EDITSOURCE"],
+        "phoneNumber" => $_POST["EDITPHONE"],
+        "email" => $_POST["EDITEMAIL"],
+        "disabled" => $_POST["EDITDISABLE"]
+    ];
+    array_push($texts, $newCoach);
 }
 
 $newText = json_encode($texts, JSON_PRETTY_PRINT);
