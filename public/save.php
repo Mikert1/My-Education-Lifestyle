@@ -35,7 +35,7 @@ for ($j = 0; $j < count($texts); $j++) {
         $texts[$j]["image"] = $_POST["EDITSOURCE"];
         $texts[$j]["phoneNumber"] = $_POST["EDITPHONE"];
         $texts[$j]["email"] = $_POST["EDITEMAIL"];
-        $texts[$j]["disabled"] = $_POST["EDITDISABLE"];
+        $texts[$j]["disabled"] = ($_POST["EDITDISABLE"] == "Disabled");
         echo $_POST["EDITDELETE"];
         if ($_POST["EDITDELETE"] == "true") {
             unset($texts[$j]);

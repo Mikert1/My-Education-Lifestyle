@@ -5,7 +5,7 @@
         "email": "email3@wfgsi",
         "phoneNumber": "1234567810",
         "specialty": "Education",
-        "disabled": null,
+        "disabled": false,
         "image": "https:\/\/via.placeholder.com\/150"
     },
     {
@@ -14,16 +14,16 @@
         "email": "email3dutdud@fifujf",
         "phoneNumber": "1234567810",
         "specialty": "Education",
-        "disabled": null,
+        "disabled": true,
         "image": "https:\/\/via.placeholder.com\/150"
     },
     {
         "id": 3,
         "name": "Nieuwe naam",
-        "email": "email3",
+        "email": "email3@gmail.com",
         "phoneNumber": "1234567810",
-        "specialty": "Education",
-        "disabled": null,
+        "specialty": "Mental health",
+        "disabled": false,
         "image": "https:\/\/via.placeholder.com\/150"
     },
     {
@@ -33,6 +33,6 @@
         "image": "https:\/\/via.placeholder.com\/150",
         "phoneNumber": "12345t5",
         "email": "1245@dfnbfd.cfhb",
-        "disabled": "false"
+        "disabled": true
     }
 ]
