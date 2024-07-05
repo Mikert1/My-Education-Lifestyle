@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Lifestyle Education | E-Books</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <script src="src/pdf.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
+    <div>
+        <button onclick="OpenPDF('pdf/pigeon.pdf')">pigeon</button>
+        <button onclick="OpenPDF('pdf/Document.pdf')">document</button>
+    </div>
     <embed id="pdfViewer" width="500" height="100%" 
     type="application/pdf">
-    <div>
+    <div class="navigation">
         <button onclick="NextPage('next')">></button>
         <p id="PageNumber"></p>
         <p>/</p>
         <p id="TotalPages"></p>
         <button onclick="NextPage('prev')">prev</button>
     </div>
+    <!-- <style>
+        .navigation {
+            visibility: ;
+        }
+    </style> -->
 </body>
 </html>

@@ -54,7 +54,7 @@ getData()
                 specialty.value = element.specialty;
                 phone.value = element.phoneNumber;
                 email.value = element.email;
-                disable.value = element.disabled;
+                disable.checked = element.disabled;
                 id.value = element.id;
                 save.addEventListener("click", () => {
                     element.image = source.value;

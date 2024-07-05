@@ -41,6 +41,7 @@ promise.then(data => {
             count++;
             console.log(count);
             const cartDivName = template.content.cloneNode(true);
+            
             cartDivName.querySelector("#naam").textContent = data[i].name;
             cartDivName.querySelector("#image").src = data[i].image;
             cartDivName.querySelector("#specialty").textContent = data[i].specialty;
