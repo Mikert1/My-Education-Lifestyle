@@ -9,12 +9,14 @@ html {
     display: flex;
     flex-direction: column;
 }
+
 .Bodycoach {
     flex-direction: row;
     height: 26.8rem;
     display: flex;
     justify-content: center;
 }
+
 main {
     flex: 1;
     display: flex;
@@ -256,11 +258,6 @@ footer {
     padding: 2rem;
 }
 
-.footerobject {
-    margin-top: auto;
-    height: 100px;
-
-}
 
 
 footer img {
@@ -319,7 +316,7 @@ footer li {
 .footerobject {
     margin-top: 0px;
     width: 100%;
-    height: 16.36rem;
+    min-height: 261.5px;
 }
 
 /* Home */
@@ -450,6 +447,11 @@ footer li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 5rem 25rem;
+    border: #51A7D8 solid 3px;
+    border-radius: 3rem;
+    padding: 1rem;
+    background-color: #ffffff;
 }
 
 /* Formulier */
@@ -522,6 +524,32 @@ footer li {
     cursor: pointer;
 }
 
+.navigation {
+    display: none;
+}
+
+.Ebook-button {
+    display: flex;
+    padding-left: 9rem;
+    gap: 10px;
+    align-items: center;
+}
+
+.outline {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #51a7d8;
+}
+
+embed {
+    padding-left: 9rem;
+}
+.bodyebooks {
+    height: 100vh;
+}
+.bodycontact {
+    height: 100vh;
+}
 @media (min-width: 600px) {
     .contactformulier form {
         width: 30rem;
@@ -551,7 +579,7 @@ footer li {
 }
 
 @media (max-width: 600px) {
-    .morecards{
+    .morecards {
         display: flex;
         justify-content: start;
         flex-direction: row;
