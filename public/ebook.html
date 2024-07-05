@@ -10,23 +10,38 @@
 </head>
 <body>
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
-    <div>
-        <button onclick="OpenPDF('pdf/pigeon.pdf')">pigeon</button>
-        <button onclick="OpenPDF('pdf/Document.pdf')">document</button>
+    <div class="Ebook-button">
+        <button onclick="ClosePDF()" class="outline">Back</button>
+        <button onclick="OpenPDF('pdf/10-Easy-Steps-to-Turning-Dreams-into-Reality.pdf')" class="outline">Dreams into Reality</button>
+        <button onclick="OpenPDF('pdf/The-Real-Power-of-Affirmations.pdf')" class="outline">Power of Affirmations</button>
     </div>
-    <embed id="pdfViewer" width="500" height="100%" 
+    <embed id="pdfViewer" width="5" height="100%" 
     type="application/pdf">
-    <div class="navigation">
-        <button onclick="NextPage('next')">></button>
+    <div id="navigation" class="navigation">
+        <button onclick="NextPage('prev')" class="outline">prev</button>
         <p id="PageNumber"></p>
         <p>/</p>
         <p id="TotalPages"></p>
-        <button onclick="NextPage('prev')">prev</button>
+        <button onclick="NextPage('next')" class="outline">></button>
     </div>
-    <!-- <style>
+    <style>
         .navigation {
-            visibility: ;
+            display: none;
         }
-    </style> -->
+        .Ebook-button {
+            display: flex;
+            padding-left: 9rem;
+            gap: 10px;
+            align-items: center;
+        }
+        .outline {
+            padding: 5px;
+            border-radius: 10px;
+            border: 2px solid #51a7d8;
+        }
+        embed {
+            padding-left: 9rem;
+        }
+        </style>
 </body>
 </html>
