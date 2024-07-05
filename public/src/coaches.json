@@ -52,5 +52,14 @@
         "phoneNumber": "12345t5",
         "email": "1@gmail.com",
         "disabled": null
+    },
+    {
+        "id": 6,
+        "name": "pneumonoultramicroscopicsilicovolcanoconiosis",
+        "specialty": "Mental health",
+        "image": "https:\/\/storage.kawasaki.eu\/public\/kawasaki.eu\/en-EU\/model\/23MY_Ninja%20ZX-10R_GN1_STU%20(1).002.png",
+        "phoneNumber": "6969",
+        "email": "69@gmail.com",
+        "disabled": false
     }
 ]
