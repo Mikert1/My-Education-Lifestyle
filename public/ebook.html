@@ -8,7 +8,7 @@
     <script src="src/pdf.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bodyebooks">
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
     <div class="Ebook-button">
         <button onclick="ClosePDF()" class="outline">Back</button>
@@ -24,24 +24,6 @@
         <p id="TotalPages"></p>
         <button onclick="NextPage('next')" class="outline">></button>
     </div>
-    <style>
-        .navigation {
-            display: none;
-        }
-        .Ebook-button {
-            display: flex;
-            padding-left: 9rem;
-            gap: 10px;
-            align-items: center;
-        }
-        .outline {
-            padding: 5px;
-            border-radius: 10px;
-            border: 2px solid #51a7d8;
-        }
-        embed {
-            padding-left: 9rem;
-        }
-        </style>
+    <object data="object/footer.html" class="footerobject"></object>    
 </body>
 </html>
