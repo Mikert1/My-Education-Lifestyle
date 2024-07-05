@@ -45,6 +45,9 @@ promise.then(data => {
             cartDivName.querySelector("#naam").textContent = data[i].name;
             cartDivName.querySelector("#image").src = data[i].image;
             cartDivName.querySelector("#specialty").textContent = data[i].specialty;
+            cartDivName.querySelector(".card").addEventListener("click", function() {
+                top.location.href = `../info.html?id=${data[i].id}`;
+            });
             document.body.appendChild(cartDivName);
         }
     }
