@@ -9,7 +9,12 @@ html {
     display: flex;
     flex-direction: column;
 }
-
+.Bodycoach {
+    flex-direction: row;
+    height: 26.8rem;
+    display: flex;
+    justify-content: center;
+}
 main {
     flex: 1;
     display: flex;
@@ -75,9 +80,11 @@ nav img {
 .menu-icon.rotate {
     transform: rotate(180deg);
 }
- nav a:hover {
-     color: #51A7D8;
- }
+
+nav a:hover {
+    color: #51A7D8;
+}
+
 @media (max-width: 1400px) {
     nav a {
         padding: 10px 10px;
@@ -189,7 +196,7 @@ nav img {
     .navbarObject.active {
         height: 440px;
     }
-   
+
 }
 
 .navbarObject {
@@ -200,12 +207,14 @@ nav img {
 object {
     width: 100%;
 }
+
 .aboutus {
     display: flex;
     margin-top: 3rem;
     margin-bottom: 3rem;
     justify-content: center;
 }
+
 .abouttext {
     width: 40%;
     border: #51A7D8 solid 3px;
@@ -214,12 +223,14 @@ object {
     padding: 1rem;
 
 }
+
 .aboutus img {
     width: 40%;
     height: auto;
     margin-left: 1rem;
     border-radius: 3rem;
 }
+
 .contact {
     display: flex;
     margin-top: 3rem;
@@ -455,7 +466,7 @@ footer li {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     height: auto;
     border: #51A7D8 solid 3px;
     border-radius: 2rem;
@@ -471,7 +482,7 @@ footer li {
     border-radius: 2rem;
     padding: 2rem;
     box-sizing: border-box;
-    margin: 0 auto;
+
 }
 
 .contactformulier h2 {
@@ -540,7 +551,7 @@ footer li {
 }
 
 @media (max-width: 600px) {
-    .Bodycoach {
+    .morecards{
         display: flex;
         justify-content: start;
         flex-direction: row;
@@ -635,6 +646,51 @@ footer li {
         margin-bottom: 2rem;
     }
 
+    .aboutus {
+        display: flex;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abouttext {
+        width: 90%;
+        border: #51A7D8 solid 3px;
+        margin-right: 0rem;
+        border-radius: 3rem;
+        padding: 1rem;
+
+    }
+
+    .aboutus img {
+        width: 90%;
+        margin-top: 1rem;
+        border: #51A7D8 solid 3px;
+        height: auto;
+        margin-left: 0rem;
+        border-radius: 3rem;
+    }
+
+    .contact {
+        display: flex;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacttext {
+        width: 90%;
+        border: #51A7D8 solid 3px;
+        margin-right: 0rem;
+        border-radius: 3rem;
+        padding: 1rem;
+
+    }
+
     .footernavigation {
         display: none;
     }
@@ -647,10 +703,12 @@ footer li {
         text-decoration: none;
 
     }
+
     .icon-container {
         border-top: #fff solid 2px;
         margin-top: 2rem;
     }
+
     .footerobject {
         max-height: 14.15rem;
     }

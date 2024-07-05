@@ -30,23 +30,27 @@ async function getData() {
         throw error;
     }
 }
+let count = 0;
 const promise = getData()
 const template = document.getElementById("coach");
+const coachid = document.getElementById("Coachid");
 promise.then(data => {
     for (let i = 0; i < data.length; i++) {
+        console.log(data[i].specialty);
         if (params.specialty == data[i].specialty) {
-            let cartDiv = document.createElement("div");
-            if (data.length == 1) {
-                cartDiv.classList.add("singelcard");
-            }
-            else {
-                cartDiv.classList.add("morecards");
-            }
+            count++;
+            console.log(count);
             const cartDivName = template.content.cloneNode(true);
             cartDivName.querySelector("#naam").textContent = data[i].name;
             cartDivName.querySelector("#image").src = data[i].image;
             cartDivName.querySelector("#specialty").textContent = data[i].specialty;
             document.body.appendChild(cartDivName);
         }
+    }
+    if (count == 1) {
+        coachid.classList.add("singelcard");
+    }
+    else {
+        coachid.classList.add("morecards");
     }
 })
