@@ -89,4 +89,8 @@ function NextPage(id) {
     }
 }
 
+document.getElementById('open10stesps').addEventListener('click', () => {
+    OpenPDF('pdf/10-Easy-Steps-to-Turning-Dreams-into-Reality.pdf');
+});
+
 export { OpenPDF, ClosePDF, NextPage };
