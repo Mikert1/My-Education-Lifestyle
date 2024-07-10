@@ -196,7 +196,7 @@ nav a:hover {
     }
 
     .navbarObject.active {
-        height: 440px;
+        min-height: 440px;
     }
 
 }
