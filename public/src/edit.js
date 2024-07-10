@@ -25,39 +25,43 @@ function getQueryParams() {
 }
 
 let params = getQueryParams();
-if (params.name) {
-    console.log(params.name);
+if (params.id) {
+    console.log(params.id);
 } else {
-    console.log("No specialty provided");
+    console.log("No name provided");
 }
 
-const inputName = "naam1";
+const inputId = params.id;
+const id = document.getElementById("EDITID");
 const image = document.getElementById("EDITIMAGE");
 const source = document.getElementById("EDITSOURCE");
 const name = document.getElementById("EDITNAME");
+const company = document.getElementById("EDITCOMPANY");
 const specialty = document.getElementById("EDITSPECIALTY");
 const disable = document.getElementById("EDITDISABLE");
 const phone = document.getElementById("EDITPHONE");
 const email = document.getElementById("EDITEMAIL");
+const website = document.getElementById("EDITWEBSITE");
+const editLocation = document.getElementById("EDITLOCATION"); // Changed variable name
 const save = document.getElementById("EDITSAVE");
 
 getData()
     .then(data => {
         for (let i = 0; i < data.length; i++) {
             const element = data[i];
-            if (element.name == inputName) {
+            if (element.id == inputId) {
                 console.log(data);
                 image.src = element.image;
                 source.value = element.image;
+                company.value = element.company;
                 name.value = element.name;
                 specialty.value = element.specialty;
                 phone.value = element.phoneNumber;
                 email.value = element.email;
-                disable.value = element.disabled;
-                disable.addEventListener("click", () => {
-                    element.disabled = !element.disabled;
-                    disable.value = element.disabled;
-                });
+                website.value = element.website;
+                editLocation.value = element.location; // Changed variable name
+                disable.checked = element.disabled;
+                id.value = element.id;
                 save.addEventListener("click", () => {
                     element.image = source.value;
                     element.name = name.value;
@@ -66,27 +70,27 @@ getData()
                     element.email = email.value;
                     element.disabled = disable.value;
                     data[i] = element;
-                    // give php waht it need to save data to json so i can do $data = json_decode($_POST['data'], true);
-                    const formData = new FormData();
-                    formData.append('data', JSON.stringify(data));
-                    fetch('src/save.php', {
-                        method: 'POST',
-                        body: formData
-                    }).then(response => {
-                        if (!response.ok) {
-                            throw new Error('Failed to save');
-                        }
-                        alert("Saved");
-                    }).catch(error => {
-                        console.error('Error saving:', error);
-                        throw error;
-                    });
                     }
                 );
             }
+        }
+        if (inputId == "new") {
+            image.src = "https://via.placeholder.com/150";
+            source.value = "https://via.placeholder.com/150";
+            company.value = "";
+            name.value = "";
+            specialty.value = "";
+            phone.value = "";
+            email.value = "";
+            website.value = "";
+            editLocation.value = ""; // Changed variable name
+            disable.value = false;
+            id.value = "new";
         }
     })
     .catch(error => {
         console.error('Error fetching:', error);
         throw error;
     });
+
+// ...
