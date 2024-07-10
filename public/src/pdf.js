@@ -88,3 +88,5 @@ function NextPage(id) {
         load(PDF);
     }
 }
+
+export { OpenPDF, ClosePDF, NextPage };
