@@ -1,6 +1,10 @@
 let pageNumber = 1;
 let PageNumbers = null;
 let PDF = "";
+
+// The workerSrc property shall be specified.
+pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.mjs';
+
 function load(PDFLink) {
     const url = `${PDFLink}`;
 
