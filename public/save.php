@@ -31,9 +31,12 @@ $texts = json_decode(file_get_contents('src/coaches.json'), true);
 for ($j = 0; $j < count($texts); $j++) {
     if ($texts[$j]["id"] == $_POST["EDITID"]) {
         $texts[$j]["name"] = $_POST["EDITNAME"];
+        $texts[$j]["company"] = $_POST["EDITCOMPANY"];
         $texts[$j]["specialty"] = $_POST["EDITSPECIALTY"];
         $texts[$j]["image"] = $_POST["EDITSOURCE"];
         $texts[$j]["phoneNumber"] = $_POST["EDITPHONE"];
+        $texts[$j]["website"] = $_POST["EDITWEBSITE"];
+        $texts[$j]["location"] = $_POST["EDITLOCATION"];
         $texts[$j]["email"] = $_POST["EDITEMAIL"];
         $texts[$j]["disabled"] = (isset($_POST["EDITDISABLE"]) == "Disabled");
         echo isset($_POST["EDITDELETE"]);
