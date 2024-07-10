@@ -87,6 +87,17 @@ nav a:hover {
     color: #51A7D8;
 }
 
+.Ebook-button {
+    display: flex;
+    padding-left: 9rem;
+    gap: 10px;
+    align-items: center;
+}
+
+embed {
+    padding-left: 9rem;
+}
+
 @media (max-width: 1400px) {
     nav a {
         padding: 10px 10px;
@@ -199,6 +210,15 @@ nav a:hover {
         min-height: 440px;
     }
 
+    .Ebook-button {
+        display: flex;
+        padding-left: 0rem;
+        align-items: center;
+    }
+
+    embed {
+        padding-left: 0rem;
+    }
 }
 
 .navbarObject {
@@ -532,21 +552,11 @@ footer li {
     display: none;
 }
 
-.Ebook-button {
-    display: flex;
-    padding-left: 9rem;
-    gap: 10px;
-    align-items: center;
-}
 
 .outline {
     padding: 5px;
     border-radius: 10px;
     border: 2px solid #51a7d8;
-}
-
-embed {
-    padding-left: 9rem;
 }
 
 .bodyebooks {

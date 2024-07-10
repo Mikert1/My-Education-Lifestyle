@@ -7,8 +7,8 @@ function load(PDFLink) {
     const loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then(function (pdf) {
         pdf.getPage(pageNumber).then(function (page) {
-            const fixedWidth = 450; // Set your desired width here
-            const fixedHeight = 650; // Set your desired height here
+            const fixedWidth = 375; // Set your desired width here
+            const fixedHeight = 500; // Set your desired height here
 
             const viewport = page.getViewport({ scale: 1 });
             const scaleX = fixedWidth / viewport.width;
