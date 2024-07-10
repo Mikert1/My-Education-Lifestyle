@@ -774,7 +774,6 @@ embed {
     margin: 10px;
     cursor: pointer;
 }
-/* Styles specifically for the contact page */
 .bodycontact {
     display: flex;
     flex-direction: column;
