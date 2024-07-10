@@ -774,3 +774,20 @@ embed {
     margin: 10px;
     cursor: pointer;
 }
+/* Styles specifically for the contact page */
+.bodycontact {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerobject {
+    width: 100%;
+    flex-shrink: 0;
+}
