@@ -42,7 +42,7 @@ const disable = document.getElementById("EDITDISABLE");
 const phone = document.getElementById("EDITPHONE");
 const email = document.getElementById("EDITEMAIL");
 const website = document.getElementById("EDITWEBSITE");
-const editLocation = document.getElementById("EDITLOCATION"); // Changed variable name
+const editLocation = document.getElementById("EDITLOCATION");
 const save = document.getElementById("EDITSAVE");
 
 getData()
@@ -59,7 +59,7 @@ getData()
                 phone.value = element.phoneNumber;
                 email.value = element.email;
                 website.value = element.website;
-                editLocation.value = element.location; // Changed variable name
+                editLocation.value = element.location;
                 disable.checked = element.disabled;
                 id.value = element.id;
                 save.addEventListener("click", () => {
@@ -83,7 +83,7 @@ getData()
             phone.value = "";
             email.value = "";
             website.value = "";
-            editLocation.value = ""; // Changed variable name
+            editLocation.value = "";
             disable.value = false;
             id.value = "new";
         }

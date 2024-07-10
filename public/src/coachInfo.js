@@ -47,14 +47,18 @@ getData()
             const element = data[i];
             if (element.id == inputId) {
                 console.log(data);
-                image.src = element.image;
-                name.textContent = element.name;
-                company.textContent = element.company;
-                specialty.textContent = element.specialty;
-                phone.textContent = element.phoneNumber;
-                email.textContent = element.email;
-                website.textContent = element.website;
-                editLocation.textContent = element.location;
+                if (!element.disabled) {
+                    image.src = element.image;
+                    name.textContent = element.name;
+                    company.textContent = element.company;
+                    specialty.textContent = element.specialty;
+                    phone.textContent = element.phoneNumber;
+                    email.textContent = element.email;
+                    website.textContent = element.website;
+                    editLocation.textContent = element.location;
+                } else {
+                    console.log("Card is disabled");
+                }
             }
         }
     })
