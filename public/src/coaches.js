@@ -30,31 +30,18 @@ async function getData() {
         throw error;
     }
 }
-let count = 0;
 const promise = getData()
 const template = document.getElementById("coach");
-const coachid = document.getElementById("Coachid");
 promise.then(data => {
     for (let i = 0; i < data.length; i++) {
-        console.log(data[i].specialty);
         if (params.specialty == data[i].specialty) {
-            count++;
-            console.log(count);
+            let cartDiv = document.createElement("div");
+            cartDiv.classList.add("card");
             const cartDivName = template.content.cloneNode(true);
-            
             cartDivName.querySelector("#naam").textContent = data[i].name;
             cartDivName.querySelector("#image").src = data[i].image;
             cartDivName.querySelector("#specialty").textContent = data[i].specialty;
-            cartDivName.querySelector(".card").addEventListener("click", function() {
-                top.location.href = `../info.html?id=${data[i].id}`;
-            });
             document.body.appendChild(cartDivName);
         }
-    }
-    if (count == 1) {
-        coachid.classList.add("singelcard");
-    }
-    else {
-        coachid.classList.add("morecards");
     }
 })

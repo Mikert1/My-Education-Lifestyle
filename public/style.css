@@ -1,5 +1,4 @@
 /* Algemeen */
-/* test */
 body,
 html {
     margin: 0;
@@ -8,13 +7,6 @@ html {
     background-color: #ececec;
     display: flex;
     flex-direction: column;
-}
-
-.Bodycoach {
-    flex-direction: row;
-    height: 26.8rem;
-    display: flex;
-    justify-content: center;
 }
 
 main {
@@ -83,21 +75,6 @@ nav img {
     transform: rotate(180deg);
 }
 
-nav a:hover {
-    color: #51A7D8;
-}
-
-.Ebook-button {
-    display: flex;
-    padding-left: 9rem;
-    gap: 10px;
-    align-items: center;
-}
-
-embed {
-    padding-left: 9rem;
-}
-
 @media (max-width: 1400px) {
     nav a {
         padding: 10px 10px;
@@ -146,14 +123,8 @@ embed {
     .nav-list {
         flex-direction: column;
         align-items: center;
-        height: 5rem;
     }
-
-    .navbarObject {
-        min-height: 179px;
-        transition: all 0.5s ease-in-out;
-    }
-
+    
     nav {
         height: auto;
         flex-direction: column;
@@ -189,7 +160,7 @@ embed {
     }
 
     .nav-list.active {
-        height: 261px;
+        height: 251px;
     }
 
     nav a {
@@ -203,21 +174,10 @@ embed {
         height: 40px;
         margin-right: 9.5rem;
         position: unset;
-        margin-top: 3rem;
     }
 
     .navbarObject.active {
-        min-height: 440px;
-    }
-
-    .Ebook-button {
-        display: flex;
-        padding-left: 0rem;
-        align-items: center;
-    }
-
-    embed {
-        padding-left: 0rem;
+        height: 392px;
     }
 }
 
@@ -230,112 +190,24 @@ object {
     width: 100%;
 }
 
-.aboutus {
-    display: flex;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    justify-content: center;
-}
-
-.abouttext {
-    width: 40%;
-    border: #51A7D8 solid 3px;
-    margin-right: 1rem;
-    border-radius: 3rem;
-    padding: 1rem;
-
-}
-
-.aboutus img {
-    width: 40%;
-    height: auto;
-    margin-left: 1rem;
-    border-radius: 3rem;
-}
-
-.contact {
-    display: flex;
-    justify-content: center;
-    margin: 3rem 15rem;
-}
-
-.contacttext {
-    width: auto;
-    height: auto;
-    border: #51A7D8 solid 3px;
-    margin-right: 1rem;
-    border-radius: 3rem;
-    padding: 1rem;
-
-}
-
 /* Footer */
 footer {
     background-color: #76C5AF;
     color: #fff;
     text-align: center;
-    padding: 2rem;
-}
-
-
-
-footer img {
-    width: auto;
-    height: 50px;
-}
-
-.footernavigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    margin-top: 2rem;
-}
-
-.footernavigation a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: 0.5s;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-.footernavigation a:hover {
-    color: #51A7D8;
-
-}
-
-footer li {
-    display: inline;
-}
-
-.footernavigation ul {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 1rem;
-}
-
-
-.icon svg {
-    transition: fill 0.3s;
-    fill: #fff;
-    margin-right: 1rem;
-    margin-left: 1rem;
-}
-
-.icon:hover svg {
-    fill: #51A7D8;
-
+    width: 100%;
+    padding: 20px;
+    height: 100px;
 }
 
 .footerobject {
-    margin-top: 0px;
-    width: 100%;
-    min-height: 261.5px;
+    margin-top: auto;
+    height: 100px;
+}
+
+.bodyfooter {
+    display: flex;
+    justify-content: end;
 }
 
 /* Home */
@@ -356,7 +228,6 @@ footer li {
     width: 100%;
     object-fit: cover;
     max-height: 30rem;
-    top: 0%;
 }
 
 .text-overlay {
@@ -466,17 +337,12 @@ footer li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 2rem;
-    border: #51A7D8 solid 3px;
-    border-radius: 3rem;
-    padding: 1rem;
-    background-color: #ffffff;
 }
 
 /* Formulier */
 .contactformulier {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 10%;
@@ -487,7 +353,7 @@ footer li {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 40%;
+    width: auto;
     height: auto;
     border: #51A7D8 solid 3px;
     border-radius: 2rem;
@@ -503,19 +369,14 @@ footer li {
     border-radius: 2rem;
     padding: 2rem;
     box-sizing: border-box;
-
+    margin: 0 auto;
 }
 
 .contactformulier h2 {
     text-align: center;
     margin-bottom: 1rem;
 }
-.options {
-    border-radius: 3rem;
-}
-.bericht {
-    border-radius: 3rem;
-}
+
 .input {
     display: flex;
     flex-direction: column;
@@ -548,161 +409,6 @@ footer li {
     cursor: pointer;
 }
 
-.navigation {
-    display: none;
-}
-
-
-.outline {
-    padding: 5px;
-    border-radius: 10px;
-    border: 2px solid #51a7d8;
-}
-
-.bodyebooks {
-    height: 100vh;
-}
-
-.bodycontact {
-    height: 100vh;
-}
-
-.editlayout {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    width: 80%;
-    height: 1000px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.editQuickinfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 47.5%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-.editAll {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 47.5%;
-    height: 100%;
-    background-color: rgb(177, 177, 177);
-    border-radius: 10px;
-}
-
-.editimage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40%;
-    background-color: rgb(170, 170, 170);
-    border-radius: 10px;
-}
-
-.editimage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.editImportant {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 55%;
-    background-color: rgb(177, 177, 177);
-    border-radius: 10px;
-}
-
-.border-blue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: #51A7D8 5px solid;
-}
-
-.border-green {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: #76C5AF 5px solid;
-}
-
-@media screen and (max-width: 800px) {
-    .editlayout {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-top: 50px;
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-        height: 1000px;
-        gap: 10px;
-    }
-
-    .editQuickinfo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        gap: 10px;
-    }
-
-    .editAll {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(177, 177, 177);
-    }
-
-    .editimage {
-        width: 100%;
-        height: 100%;
-        background-color: rgb(177, 177, 177);
-    }
-
-
-    .editImportant {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 50%;
-        background-color: rgb(177, 177, 177);
-    }
-}
-
 @media (min-width: 600px) {
     .contactformulier form {
         width: 30rem;
@@ -732,12 +438,14 @@ footer li {
 }
 
 @media (max-width: 600px) {
-    .morecards {
+    #Bodycoach {
         display: flex;
-        justify-content: start;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
+        margin-left: 10rem;
     }
-
+    
     #sectioncoach {
         display: flex;
         flex-direction: row;
@@ -748,11 +456,10 @@ footer li {
         border-radius: 10px;
         border: #51A7D8 solid 3px;
     }
-
+    
     .Coachobject {
         height: 29rem;
     }
-
     .contactformulier {
         display: flex;
         justify-content: center;
@@ -763,12 +470,10 @@ footer li {
         margin-left: 0%;
         margin-right: 0%;
     }
-
     .contactformulier img {
-        width: calc(100% - 5px);
+        width: 100%;
         margin: 0%;
     }
-
     .form {
         min-width: 20rem;
         max-width: 10rem;
@@ -784,18 +489,18 @@ footer li {
         margin-left: 0%;
         margin-right: 0%;
     }
-
+    
     .info2 {
         display: block;
         margin-left: 1rem;
         margin-right: 1rem;
     }
-
+    
     .textimage2 {
         width: 100%;
         margin: 0%;
     }
-
+    
     .textarea2 {
         min-width: fit-content;
         max-width: fit-content;
@@ -826,73 +531,11 @@ footer li {
         flex-direction: column-reverse;
         margin-bottom: 2rem;
     }
-
-    .aboutus {
-        display: flex;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .abouttext {
-        width: 90%;
-        border: #51A7D8 solid 3px;
-        margin-right: 0rem;
-        border-radius: 3rem;
-        padding: 1rem;
-
-    }
-
-    .aboutus img {
-        width: 90%;
-        margin-top: 1rem;
-        border: #51A7D8 solid 3px;
-        height: auto;
-        margin-left: 0rem;
-        border-radius: 3rem;
-    }
-
-    .contact {
-        display: flex;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contacttext {
-        width: 90%;
-        border: #51A7D8 solid 3px;
-        margin-right: 0rem;
-        border-radius: 3rem;
-        padding: 1rem;
-
-    }
-
-    .footernavigation {
-        display: none;
-    }
-
-    footer svg {
-        margin-top: 2rem;
-    }
-
-    footer a {
-        text-decoration: none;
-
-    }
-
-    .icon-container {
-        border-top: #fff solid 2px;
-        margin-top: 2rem;
-    }
-
     .footerobject {
-        min-height: 14.17rem;
+        margin-top: 0px;
+        width: 100%;
     }
+       
 }
 
 /* admin */
@@ -926,21 +569,4 @@ footer li {
     padding: 10px;
     margin: 10px;
     cursor: pointer;
-}
-
-.bodycontact {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.content-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.footerobject {
-    width: 100%;
-    flex-shrink: 0;
 }

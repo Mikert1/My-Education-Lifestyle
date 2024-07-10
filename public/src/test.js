@@ -39,15 +39,7 @@ const template = document.getElementById("coachTemplate");
 getData("coaches")
     .then(data => {
         for (var i = 0; i < data.length; i++) {
-            const element = data[i];
                 const cartDivName = template.content.cloneNode(true);
-                cartDivName.querySelector(".card").addEventListener("click", function() {
-                    window.location.href = `edit.html?id=${element.id}`;
-                });
-                if (data[i].disabled == true) {
-                    cartDivName.querySelector(".card").style.borderColor = "red";
-                    cartDivName.querySelector(".button").style.backgroundColor = "red";
-                }
                 cartDivName.querySelector("#image").src = data[i].image;
                 cartDivName.querySelector("#naam").textContent = data[i].name;
                 cartDivName.querySelector("#specialty").textContent = data[i].specialty;
@@ -62,7 +54,7 @@ getData("coaches")
         newDiv.classList.add("addCircle");
         newDiv.textContent = "+";
         cartDivName.querySelector(".card").addEventListener("click", function() {
-            window.location.href = "edit.html?id=" + "new";
+            window.location.href = "edit.html";
         });
         cartDivName.querySelector(".card").appendChild(newDiv);
         document.getElementById("coach").appendChild(cartDivName);
