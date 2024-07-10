@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Lifestyle Education | Education</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="src/oefeningen.js" defer></script>
     <script src="src/texts.js" defer></script>
 
 </head>
@@ -21,7 +23,20 @@
     </div>
     <object data="object/coaches.html?specialty=Mental health" class="Coachobject" id="my-object"></object>
 
+    <div class="Ebook-button">
+        <button onclick="ClosePDF()" class="outline">Back</button>
+        <button onclick="OpenPDF('pdf/Journaling Oefeningen My Education Lifestyle.pdf')" class="outline">Journaling Oefeningen</button>
+    </div>
+    <embed id="pdfViewer" width="5" height="100%" 
+    type="application/pdf">
 
+    <div id="navigation" class="navigation">
+        <button onclick="NextPage('prev')" class="outline">prev</button>
+        <p id="PageNumber"></p>
+        <p>/</p>
+        <p id="TotalPages"></p>
+        <button onclick="NextPage('next')" class="outline">></button>
+    </div>
 
     <object data="object/footer.html" class="footerobject"></object>
 </body>
