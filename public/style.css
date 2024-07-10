@@ -446,7 +446,7 @@ footer li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 5rem 25rem;
+    margin-top: 2rem;
     border: #51A7D8 solid 3px;
     border-radius: 3rem;
     padding: 1rem;
