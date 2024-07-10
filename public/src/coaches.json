@@ -15,51 +15,9 @@
         "phoneNumber": "1234567810",
         "specialty": "Education",
         "disabled": false,
-        "image": "https:\/\/via.placeholder.com\/150"
-    },
-    {
-        "id": 4,
-        "name": "wetg",
-        "specialty": "Education",
         "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "12345t5",
-        "email": "1245@dfnbfd.cfhb",
-        "disabled": true
-    },
-    {
-        "id": 5,
-        "name": "hippopotomonstrosesquippedaliophobia",
-        "specialty": "Mental health",
-        "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "321231",
-        "email": "1@gmail.com",
-        "disabled": "false"
-    },
-    {
-        "id": 0,
-        "name": "F\u00e1bio Dani\u00ebl Melo Salvador",
-        "specialty": "Education",
-        "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "911",
-        "email": "khjghfgfd@gmail.com",
-        "disabled": null
-    },
-    {
-        "id": 3,
-        "name": "1st",
-        "specialty": "Mental health",
-        "image": "https:\/\/via.placeholder.com\/150",
-        "phoneNumber": "12345t5",
-        "email": "1@gmail.com",
-        "disabled": null
-    },
-    {
-        "id": 6,
-        "name": "pneumonoultramicroscopicsilicovolcanoconiosis",
-        "specialty": "Mental health",
-        "image": "https:\/\/storage.kawasaki.eu\/public\/kawasaki.eu\/en-EU\/model\/23MY_Ninja%20ZX-10R_GN1_STU%20(1).002.png",
-        "phoneNumber": "6969",
-        "email": "69@gmail.com",
-        "disabled": false
+        "company": "bedrijfje",
+        "website": "afnvsidbvsdbv.jfd",
+        "location": "Nederland"
     }
 ]

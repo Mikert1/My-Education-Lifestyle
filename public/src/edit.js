@@ -36,10 +36,13 @@ const id = document.getElementById("EDITID");
 const image = document.getElementById("EDITIMAGE");
 const source = document.getElementById("EDITSOURCE");
 const name = document.getElementById("EDITNAME");
+const company = document.getElementById("EDITCOMPANY");
 const specialty = document.getElementById("EDITSPECIALTY");
 const disable = document.getElementById("EDITDISABLE");
 const phone = document.getElementById("EDITPHONE");
 const email = document.getElementById("EDITEMAIL");
+const website = document.getElementById("EDITWEBSITE");
+const editLocation = document.getElementById("EDITLOCATION"); // Changed variable name
 const save = document.getElementById("EDITSAVE");
 
 getData()
@@ -50,10 +53,13 @@ getData()
                 console.log(data);
                 image.src = element.image;
                 source.value = element.image;
+                company.value = element.company;
                 name.value = element.name;
                 specialty.value = element.specialty;
                 phone.value = element.phoneNumber;
                 email.value = element.email;
+                website.value = element.website;
+                editLocation.value = element.location; // Changed variable name
                 disable.checked = element.disabled;
                 id.value = element.id;
                 save.addEventListener("click", () => {
@@ -71,10 +77,13 @@ getData()
         if (inputId == "new") {
             image.src = "https://via.placeholder.com/150";
             source.value = "https://via.placeholder.com/150";
+            company.value = "";
             name.value = "";
             specialty.value = "";
             phone.value = "";
             email.value = "";
+            website.value = "";
+            editLocation.value = ""; // Changed variable name
             disable.value = false;
             id.value = "new";
         }
@@ -83,3 +92,5 @@ getData()
         console.error('Error fetching:', error);
         throw error;
     });
+
+// ...

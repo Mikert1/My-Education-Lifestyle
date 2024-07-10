@@ -34,9 +34,12 @@ if (params.id) {
 const inputId = params.id;
 const image = document.getElementById("EDITIMAGE");
 const name = document.getElementById("EDITNAME");
+const company = document.getElementById("EDITCOMPANY");
 const specialty = document.getElementById("EDITSPECIALTY");
 const phone = document.getElementById("EDITPHONE");
 const email = document.getElementById("EDITEMAIL");
+const website = document.getElementById("EDITWEBSITE");
+const editLocation = document.getElementById("EDITLOCATION");
 
 getData()
     .then(data => {
@@ -49,6 +52,8 @@ getData()
                 specialty.textContent = element.specialty;
                 phone.textContent = element.phoneNumber;
                 email.textContent = element.email;
+                website.textContent = element.website;
+                editLocation.textContent = element.location;
             }
         }
     })
