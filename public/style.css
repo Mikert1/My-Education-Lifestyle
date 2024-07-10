@@ -466,7 +466,7 @@ footer li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 2rem;
+    margin: 2rem 20rem;
     border: #51A7D8 solid 3px;
     border-radius: 3rem;
     padding: 1rem;
@@ -891,7 +891,7 @@ footer li {
     }
 
     .footerobject {
-        min-height: 14.17rem;
+        min-height: 14.20rem;
     }
 }
 
