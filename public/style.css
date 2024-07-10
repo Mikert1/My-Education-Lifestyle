@@ -881,7 +881,7 @@ embed {
     }
 
     .footerobject {
-        max-height: 14.15rem;
+        min-height: 14.15rem;
     }
 }
 
