@@ -2,9 +2,6 @@ let pageNumber = 1;
 let PageNumbers = null;
 let PDF = "";
 
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.mjs';
-
 function load(PDFLink) {
     const url = `${PDFLink}`;
 
@@ -88,9 +85,3 @@ function NextPage(id) {
         load(PDF);
     }
 }
-
-document.getElementById('open10stesps').addEventListener('click', () => {
-    OpenPDF('pdf/10-Easy-Steps-to-Turning-Dreams-into-Reality.pdf');
-});
-
-export { OpenPDF, ClosePDF, NextPage };
