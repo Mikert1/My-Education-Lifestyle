@@ -6,7 +6,10 @@
         "phoneNumber": "1234567810",
         "specialty": "Education",
         "disabled": false,
-        "image": "https:\/\/via.placeholder.com\/150"
+        "image": "https:\/\/via.placeholder.com\/150",
+        "company": "fjvbdfbdfb",
+        "website": "example.com",
+        "location": "Amsterdam"
     },
     {
         "id": 2,

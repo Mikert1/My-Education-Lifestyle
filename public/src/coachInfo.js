@@ -49,6 +49,7 @@ getData()
                 console.log(data);
                 image.src = element.image;
                 name.textContent = element.name;
+                company.textContent = element.company;
                 specialty.textContent = element.specialty;
                 phone.textContent = element.phoneNumber;
                 email.textContent = element.email;
