@@ -46,7 +46,7 @@ getData()
         for (let i = 0; i < data.length; i++) {
             const element = data[i];
             if (element.id == inputId) {
-                console.log(data);
+                console.log(element.disabled);
                 if (!element.disabled) {
                     image.src = element.image;
                     name.textContent = element.name;

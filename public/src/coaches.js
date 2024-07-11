@@ -37,7 +37,7 @@ const coachid = document.getElementById("Coachid");
 promise.then(data => {
     for (let i = 0; i < data.length; i++) {
         console.log(data[i].specialty);
-        if (params.specialty == data[i].specialty) {
+        if (params.specialty == data[i].specialty && !data[i].disabled) {
             count++;
             console.log(count);
             const cartDivName = template.content.cloneNode(true);
