@@ -11,26 +11,24 @@
 <body class="bodyebooks">
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
     <div class="ebookFlex">
-        <div class="divAbsolute">
-            <embed id="pdfViewer1" width="375px" height="500px" 
-            type="application/pdf">
-            <div id="navigation" class="Ebook-button">
-                <button onclick="NextPage('prev')" class="outline">prev</button>
-                <p id="PageNumber"></p>
+        <div class="divRelative">
+            <div id="pdfViewer1" class="pdfViewer"></div>
+            <div id="navigation1" class="Ebook-button">
+                <button onclick="NextPage('prev', 'pdfViewer1')" class="outline">prev</button>
+                <p id="PageNumber1"></p>
                 <p>/</p>
-                <p id="TotalPages"></p>
-                <button onclick="NextPage('next')" class="outline">></button>
+                <p id="TotalPages1"></p>
+                <button onclick="NextPage('next', 'pdfViewer1')" class="outline">next</button>
             </div>
         </div>
-        <div class="divAbsolute">
-            <embed id="pdfViewer2" width="375" height="500" 
-            type="application/pdf">
-            <div id="navigation1" class="Ebook-button">
-                <button onclick="NextPage('prev')" class="outline">prev</button>
-                <p id="PageNumber"></p>
+        <div class="divRelative">
+            <div id="pdfViewer2" class="pdfViewer"></div>
+            <div id="navigation2" class="Ebook-button">
+                <button onclick="NextPage('prev', 'pdfViewer2')" class="outline">prev</button>
+                <p id="PageNumber2"></p>
                 <p>/</p>
-                <p id="TotalPages"></p>
-                <button onclick="NextPage('next')" class="outline">></button>
+                <p id="TotalPages2"></p>
+                <button onclick="NextPage('next', 'pdfViewer2')" class="outline">next</button>
             </div>
         </div>
     </div>

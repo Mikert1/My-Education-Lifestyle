@@ -7,8 +7,8 @@ function load(PDFLink) {
     const loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then(function (pdf) {
         pdf.getPage(pageNumber).then(function (page) {
-            const fixedWidth = 500; // Set your desired width here
-            const fixedHeight = 750; // Set your desired height here
+            const fixedWidth = 375; // Set your desired width here
+            const fixedHeight = 530; // Set your desired height here
 
             const viewport = page.getViewport({ scale: 1 });
             const scaleX = fixedWidth / viewport.width;
@@ -84,3 +84,11 @@ function NextPage(id) {
         load(PDF);
     }
 }
+window.addEventListener('DOMContentLoaded', (event) => {
+    const currentLocation = window.location.pathname;
+    if (currentLocation.includes('education.html')) {
+        OpenPDF('pdf/Budget Planner My Education Lifestyle.pdf');
+    } else if (currentLocation.includes('mentalHealth.html')) {
+        OpenPDF('pdf/Journaling Oefeningen My Education Lifestyle.pdf');
+    }
+});

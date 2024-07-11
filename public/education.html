@@ -21,20 +21,17 @@
         <h4 id="18"></h4>
     </div>
     <object data="object/coaches.html?specialty=Education" class="Coachobject" id="my-object"></object>
-
-    <div class="Ebook-button">
-        <button onclick="ClosePDF()" class="outline">Back</button>
-        <button onclick="OpenPDF('pdf/Budget Planner My Education Lifestyle.pdf')" class="outline">Budget Planner</button>
-    </div>
-    <embed id="pdfViewer" width="5" height="100%" 
-    type="application/pdf">
-
-    <div id="navigation" class="navigation">
-        <button onclick="NextPage('prev')" class="outline">prev</button>
-        <p id="PageNumber"></p>
-        <p>/</p>
-        <p id="TotalPages"></p>
-        <button onclick="NextPage('next')" class="outline">></button>
+    <div>
+        <embed id="pdfViewer" width="5" height="100%" 
+        type="application/pdf">
+    
+        <div id="navigation" class="navigation">
+            <button onclick="NextPage('prev')" class="outline">prev</button>
+            <p id="PageNumber"></p>
+            <p>/</p>
+            <p id="TotalPages"></p>
+            <button onclick="NextPage('next')" class="outline">></button>
+        </div>
     </div>
 
     <object data="object/footer.html" class="footerobject"></object>
