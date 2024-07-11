@@ -219,27 +219,30 @@ embed {
     padding-left: 0rem;
     align-items: center;
     position: static;
-    margin-top: -10px;
-    /* Adjust the value to move it higher or lower */
+    margin-top: -20px;
+    /* Move higher up */
 }
 
 embed {
     padding-left: 0rem;
-    margin-top: -20px;
-    /* Adjust the value to move it higher or lower */
+    margin-top: -30px;
+    /* Move higher up */
 }
+
 canvas:last-of-type {
     padding-left: 0rem;
-    margin-top: -40px;
+    margin-top: -50px;
+    /* Move higher up */
     position: static;
-    /* Adjust the value to move it higher or lower */
 }
+
 canvas:first-of-type {
     padding-left: 0rem;
-    margin-top: -10px;
+    margin-top: -20px;
+    /* Move higher up */
     position: static;
-    /* Adjust the value to move it higher or lower */
 }
+
 .bodyebooks {
     height: 100vh;
 }
