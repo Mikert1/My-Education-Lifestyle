@@ -54,4 +54,4 @@ file_put_contents('src/texts.json', $newText);
 
 echo $newText;
 
-echo "<script>window.open('index.html','_blank')</script>";
+echo "<script>window.open('index.html','_top')</script>";

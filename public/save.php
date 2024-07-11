@@ -79,4 +79,4 @@ file_put_contents('src/coaches.json', $newText);
 
 echo $newText;
 
-echo "<script>window.open('index.html','_blank')</script>";
+echo "<script>window.open('index.html','_top')</script>";
