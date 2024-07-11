@@ -214,15 +214,34 @@ embed {
         min-height: 440px;
     }
 
-    .Ebook-button {
-        display: flex;
-        padding-left: 0rem;
-        align-items: center;
-    }
+.Ebook-button {
+    display: flex;
+    padding-left: 0rem;
+    align-items: center;
+    position: static;
+    margin-top: -10px;
+    /* Adjust the value to move it higher or lower */
+}
 
-    embed {
-        padding-left: 0rem;
-    }
+embed {
+    padding-left: 0rem;
+    margin-top: -20px;
+    /* Adjust the value to move it higher or lower */
+}
+canvas:last-of-type {
+    padding-left: 0rem;
+    margin-top: -40px;
+    position: static;
+    /* Adjust the value to move it higher or lower */
+}
+canvas:first-of-type {
+    padding-left: 0rem;
+    margin-top: -10px;
+    position: static;
+    /* Adjust the value to move it higher or lower */
+}
+.bodyebooks {
+    height: 100vh;
 }
 
 .navbarObject {
