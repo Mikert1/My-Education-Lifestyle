@@ -10,11 +10,11 @@
 </head>
 <body class="bodyebooks">
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
-    <div>
-        <div>
-            <embed id="pdfViewer1" width="5" height="100%" 
+    <div class="ebookFlex">
+        <div class="divAbsolute">
+            <embed id="pdfViewer1" width="375px" height="500px" 
             type="application/pdf">
-            <div id="navigation" class="navigation">
+            <div id="navigation" class="Ebook-button">
                 <button onclick="NextPage('prev')" class="outline">prev</button>
                 <p id="PageNumber"></p>
                 <p>/</p>
@@ -22,10 +22,10 @@
                 <button onclick="NextPage('next')" class="outline">></button>
             </div>
         </div>
-        <div>
-            <embed id="pdfViewer2" width="5" height="100%" 
+        <div class="divAbsolute">
+            <embed id="pdfViewer2" width="375" height="500" 
             type="application/pdf">
-            <div id="navigation" class="navigation">
+            <div id="navigation1" class="Ebook-button">
                 <button onclick="NextPage('prev')" class="outline">prev</button>
                 <p id="PageNumber"></p>
                 <p>/</p>

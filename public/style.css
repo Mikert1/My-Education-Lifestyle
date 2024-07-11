@@ -89,11 +89,15 @@ nav a:hover {
 
 .Ebook-button {
     display: flex;
+    position: absolute;
     padding-left: 9rem;
     gap: 10px;
     align-items: center;
 }
 
+.divAbsolute {
+    position: relative;
+}
 embed {
     padding-left: 9rem;
 }
@@ -551,11 +555,6 @@ footer li {
     cursor: pointer;
 }
 
-.navigation {
-    display: none;
-}
-
-
 .outline {
     padding: 5px;
     border-radius: 10px;
@@ -711,7 +710,19 @@ footer li {
     border-radius: 10px;
     border: #51A7D8 1px solid;
 }
-
+.ebookFlex {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 80%;
+    height: 1000px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
 @media screen and (max-width: 800px) {
     .editlayout {
         display: flex;
