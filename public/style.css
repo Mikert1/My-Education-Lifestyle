@@ -361,7 +361,7 @@ footer li {
 .footerobject {
     margin-top: 0px;
     width: 100%;
-    min-height: 261.5px;
+    min-height: 280px;
 }
 
 /* Home */
@@ -492,7 +492,7 @@ footer li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 2rem 20rem;
+    margin: 2rem;
     border: #51A7D8 solid 3px;
     border-radius: 3rem;
     padding: 1rem;
@@ -740,10 +740,9 @@ footer li {
     flex-wrap: wrap;
     margin-top: 50px;
     width: 80%;
-    height: 1000px;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 @media screen and (max-width: 800px) {
     .editlayout {
@@ -985,7 +984,7 @@ footer li {
     }
 
     .footerobject {
-        min-height: 14.20rem;
+        min-height: 227px;
     }
 }
 
