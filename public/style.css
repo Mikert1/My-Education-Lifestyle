@@ -580,6 +580,7 @@ footer li {
     height: 1000px;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 50px;
 }
 
 .editQuickinfo {
@@ -599,7 +600,7 @@ footer li {
     flex-direction: column;
     width: 47.5%;
     height: 100%;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 
@@ -610,7 +611,7 @@ footer li {
     align-items: center;
     width: 100%;
     height: 40%;
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 
@@ -628,7 +629,7 @@ footer li {
     flex-direction: column;
     width: 100%;
     height: 55%;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 
@@ -651,7 +652,13 @@ footer li {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+.border-green img {
     border: #76C5AF 5px solid;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .edittext textarea {
