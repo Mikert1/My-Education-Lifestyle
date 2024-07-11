@@ -53,3 +53,5 @@ $newText = json_encode($texts, JSON_PRETTY_PRINT);
 file_put_contents('src/texts.json', $newText);
 
 echo $newText;
+
+echo "<script>window.open('index.html','_blank')</script>";
