@@ -1,7 +1,7 @@
 let pageNumber = 1;
 let PageNumbers = null;
 let PDF = "";
-function load(PDFLink) {
+function load(PDFLink, id) {
     const url = `${PDFLink}`;
 
     const loadingTask = pdfjsLib.getDocument(url);
@@ -21,8 +21,10 @@ function load(PDFLink) {
             const context = canvas.getContext('2d');
             canvas.height = fixedHeight;
             canvas.width = fixedWidth;
-
-            document.getElementById('pdfViewer').appendChild(canvas);
+            console.log(id);
+            const container = document.getElementById(id);
+            container.innerHTML = ''; // Clear previous content
+            container.appendChild(canvas);
 
             const renderContext = {
                 canvasContext: context,
@@ -34,10 +36,8 @@ function load(PDFLink) {
             });
         });
 
-        const totalPage = document.getElementById('TotalPages');
-        const page = document.getElementById('PageNumber');
-        totalPage.innerHTML = pdf.numPages;
-        page.innerHTML = pageNumber;
+        document.getElementById('TotalPages').innerHTML = pdf.numPages;
+        document.getElementById('PageNumber').innerHTML = pageNumber;
         PageNumbers = pdf.numPages;
 
         const navigation = document.getElementById('navigation');
@@ -46,26 +46,21 @@ function load(PDFLink) {
     });
     PDF = PDFLink;
 }
-// document.addEventListener('DOMContentLoaded', function () {
-//     load();
-// });
-function ClosePDF() {
-    const pdfViewer = document.getElementById('pdfViewer');
-    while (pdfViewer.firstChild) {
-        pdfViewer.removeChild(pdfViewer.firstChild);
-    }
-    const navigation = document.getElementById('navigation');
-    navigation.classList.remove('Ebook-button');
-    navigation.classList.add('navigation');
-    console.log("hallo");
-}
-function OpenPDF(PDFLink) {
-    const pdfViewer = document.getElementById('pdfViewer');
+function OpenPDF1(PDFLink) {
+    const pdfViewer = document.getElementById('pdfViewer1').id;
     while (pdfViewer.firstChild) {
         pdfViewer.removeChild(pdfViewer.firstChild);
     }
     pageNumber = 1;
-    load(PDFLink);
+    load(PDFLink, pdfViewer);
+}
+function OpenPDF2(PDFLink) {
+    const pdfViewer = document.getElementById('pdfViewer2').id;
+    while (pdfViewer.firstChild) {
+        pdfViewer.removeChild(pdfViewer.firstChild);
+    }
+    pageNumber = 1;
+    load(PDFLink, pdfViewer);
 }
 function NextPage(id) {
     if (id == "next" && pageNumber < PageNumbers) {
@@ -84,3 +79,7 @@ function NextPage(id) {
         load(PDF);
     }
 }
+window.addEventListener('DOMContentLoaded', (event) => {
+    OpenPDF1('pdf/10-Easy-Steps-to-Turning-Dreams-into-Reality.pdf');
+    OpenPDF2('pdf/The-Real-Power-of-Affirmations.pdf');
+});

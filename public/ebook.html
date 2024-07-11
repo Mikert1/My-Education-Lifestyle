@@ -10,19 +10,29 @@
 </head>
 <body class="bodyebooks">
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
-    <div class="Ebook-button">
-        <button onclick="ClosePDF()" class="outline">Back</button>
-        <button onclick="OpenPDF('pdf/10-Easy-Steps-to-Turning-Dreams-into-Reality.pdf')" class="outline">Dreams into Reality</button>
-        <button onclick="OpenPDF('pdf/The-Real-Power-of-Affirmations.pdf')" class="outline">Power of Affirmations</button>
-    </div>
-    <embed id="pdfViewer" width="5" height="100%" 
-    type="application/pdf">
-    <div id="navigation" class="navigation">
-        <button onclick="NextPage('prev')" class="outline">prev</button>
-        <p id="PageNumber"></p>
-        <p>/</p>
-        <p id="TotalPages"></p>
-        <button onclick="NextPage('next')" class="outline">></button>
+    <div>
+        <div>
+            <embed id="pdfViewer1" width="5" height="100%" 
+            type="application/pdf">
+            <div id="navigation" class="navigation">
+                <button onclick="NextPage('prev')" class="outline">prev</button>
+                <p id="PageNumber"></p>
+                <p>/</p>
+                <p id="TotalPages"></p>
+                <button onclick="NextPage('next')" class="outline">></button>
+            </div>
+        </div>
+        <div>
+            <embed id="pdfViewer2" width="5" height="100%" 
+            type="application/pdf">
+            <div id="navigation" class="navigation">
+                <button onclick="NextPage('prev')" class="outline">prev</button>
+                <p id="PageNumber"></p>
+                <p>/</p>
+                <p id="TotalPages"></p>
+                <button onclick="NextPage('next')" class="outline">></button>
+            </div>
+        </div>
     </div>
     <object data="object/footer.html" class="footerobject"></object>    
 </body>
