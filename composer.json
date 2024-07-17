@@ -1,7 +1,0 @@
-{
-    "name": "pablito-buritos/myeducationlifestyle",
-    "type": "project",
-    "require": {
-        "vlucas/phpdotenv": "^5.6"
-    }
-}
