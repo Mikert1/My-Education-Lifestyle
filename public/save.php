@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 
+echo "<pre>";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -30,8 +31,16 @@ if ($_POST['password'] !== $password) {
     die;
 }
 
-$texts = json_decode(file_get_contents('src/coaches.json'), true);
+$texts = json_decode(
+    file_get_contents(
+        'src/coaches.json'
+    )
+    , true
+);
 
+print_r($texts);
+
+print_r($_POST);
 for ($j = 0; $j < count($texts); $j++) {
     if ($texts[$j]["id"] == $_POST["EDITID"]) {
         $texts[$j]["name"] = $_POST["EDITNAME"];
@@ -42,17 +51,16 @@ for ($j = 0; $j < count($texts); $j++) {
         $texts[$j]["website"] = $_POST["EDITWEBSITE"];
         $texts[$j]["location"] = $_POST["EDITLOCATION"];
         $texts[$j]["email"] = $_POST["EDITEMAIL"];
-        $texts[$j]["disabled"] = (isset($_POST["EDITDISABLE"]) == "Disabled");
-        echo isset($_POST["EDITDELETE"]);
-        echo $_POST["EDITDELETE"] == "true";
-        if (isset($_POST["EDITDELETE"]) == "true") {
+        $texts[$j]["disabled"] = isset($_POST["EDITDISABLE"]);
+        
+        if (isset($_POST["EDITDELETE"])) {
             echo "deleted coach";
             unset($texts[$j]);
             $texts = array_values($texts);
         }
     }
 }
-if ($_POST["EDITID"] == "new") {
+if ($_POST["EDITID"] === "new") {
     $newId = 0;
     $existingIds = [];
     foreach ($texts as $text) {
@@ -79,7 +87,7 @@ if ($_POST["EDITID"] == "new") {
 
 $newText = json_encode($texts, JSON_PRETTY_PRINT);
 
-file_put_contents('src/coaches.json', $newText);
+var_dump(file_put_contents('src/coaches.json', $newText));
 
 echo $newText;
 

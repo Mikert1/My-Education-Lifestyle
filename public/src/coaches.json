@@ -1,17 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "nieuwe naam 1",
-        "email": "email3@wfgsi",
-        "phoneNumber": "1234567810",
-        "specialty": "Education",
-        "disabled": false,
-        "image": "https:\/\/via.placeholder.com\/150",
-        "company": "fjvbdfbdfb",
-        "website": "example.com",
-        "location": "Amsterdam"
-    },
-    {
         "id": 2,
         "name": "test 2",
         "email": "email3dutdud@fifujf",
@@ -22,5 +10,14 @@
         "company": "bedrijfje",
         "website": "afnvsidbvsdbv.jfd",
         "location": "Nederland"
+    },
+    {
+        "id": 0,
+        "name": "3rtw4eyh",
+        "specialty": "Mental health",
+        "image": "https:\/\/via.placeholder.com\/150",
+        "phoneNumber": "f23456789",
+        "email": "1@gmail.com",
+        "disabled": null
     }
 ]
