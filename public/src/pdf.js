@@ -32,9 +32,10 @@ function load(PDFLink, id) {
 
 function renderPage(id) {
     let pdfData = (id === 'pdfViewer1') ? pdf1 : pdf2;
-    const pageNumber = pdfData.pageNumber;
+    pageNumber = pdfData.pageNumber;
 
     pdfData.PDF.getPage(pageNumber).then(function (page) {
+        console.log(page);
         const fixedWidth = 375;
         const fixedHeight = 500;
 
