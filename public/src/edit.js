@@ -25,18 +25,16 @@ function getQueryParams() {
 }
 
 let params = getQueryParams();
-if (params.id) {
-    console.log(params.id);
+if (params.name) {
+    console.log(params.name);
 } else {
-    console.log("No name provided");
+    console.log("No specialty provided");
 }
 
-const inputId = params.id;
-const id = document.getElementById("EDITID");
+const inputName = "naam1";
 const image = document.getElementById("EDITIMAGE");
 const source = document.getElementById("EDITSOURCE");
 const name = document.getElementById("EDITNAME");
-const company = document.getElementById("EDITCOMPANY");
 const specialty = document.getElementById("EDITSPECIALTY");
 const disable = document.getElementById("EDITDISABLE");
 const phone = document.getElementById("EDITPHONE");
@@ -49,11 +47,10 @@ getData()
     .then(data => {
         for (let i = 0; i < data.length; i++) {
             const element = data[i];
-            if (element.id == inputId) {
+            if (element.name == inputName) {
                 console.log(data);
                 image.src = element.image;
                 source.value = element.image;
-                company.value = element.company;
                 name.value = element.name;
                 specialty.value = element.specialty;
                 phone.value = element.phoneNumber;
@@ -70,6 +67,21 @@ getData()
                     element.email = email.value;
                     element.disabled = disable.value;
                     data[i] = element;
+                    // give php waht it need to save data to json so i can do $data = json_decode($_POST['data'], true);
+                    const formData = new FormData();
+                    formData.append('data', JSON.stringify(data));
+                    fetch('src/save.php', {
+                        method: 'POST',
+                        body: formData
+                    }).then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to save');
+                        }
+                        alert("Saved");
+                    }).catch(error => {
+                        console.error('Error saving:', error);
+                        throw error;
+                    });
                     }
                 );
             }
@@ -92,5 +104,3 @@ getData()
         console.error('Error fetching:', error);
         throw error;
     });
-
-// ...
