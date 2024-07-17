@@ -58,4 +58,4 @@ file_put_contents(__DIR__ . '/src/texts.json', $newText);
 
 echo $newText;
 
-// echo "<script>window.open('index.html','_top')</script>";
+// header('location: /index.html');
