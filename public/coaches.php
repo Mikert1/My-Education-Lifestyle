@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require __DIR__ . '/../vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -54,4 +58,4 @@ file_put_contents('src/texts.json', $newText);
 
 echo $newText;
 
-echo "<script>window.open('index.html','_top')</script>";
+// echo "<script>window.open('index.html','_top')</script>";
