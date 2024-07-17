@@ -28,7 +28,7 @@ if ($_POST['password'] !== $password) {
 
 $texts = json_decode(file_get_contents('src/texts.json'), true);
 
-for ($i = 1; $i <= 20; $i++) {
+for ($i = 1; $i <= 36; $i++) {
     if (isset($_POST[$i])) {
         $textExists = false;
         foreach ($texts as &$text) {

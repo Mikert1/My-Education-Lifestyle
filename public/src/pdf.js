@@ -4,13 +4,13 @@ let PDF = "";
 let pdf1 = {
     PDF: null,
     pageNumber: 1,
-    totalPage: null
+    totalPage: null,
 };
 
 let pdf2 = {
     PDF: null,
     pageNumber: 1,
-    totalPage: null
+    totalPage: null,
 };
 
 function load(PDFLink, id) {

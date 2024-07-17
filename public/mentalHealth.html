@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Lifestyle Education | Education</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="src/oefeningen.js" defer></script>
     <script src="src/texts.js" defer></script>
 
 </head>
@@ -13,13 +15,16 @@
 <body>
     <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
     <div class="uitleg">
-        <h1 id="7"></h1>
-        <h3 id="8"></h3>
+        <h1 id="20"></h1>
+        <h4 id="21"></h4>
+        <h4 id="22"></h4>
+        <h4 id="23"></h4>
+        <h4 id="24"></h4>
     </div>
     <object data="object/coaches.html?specialty=Mental health" class="Coachobject" id="my-object"></object>
 <div>
-    <div id="pdfViewer" width="5" height="100%" 
-    type="application/pdf"></div>
+    <embed id="pdfViewer" width="5" height="100%" 
+    type="application/pdf">
 
     <div id="navigation" class="navigationT">
         <button onclick="NextPage('prev')" class="outline">prev</button>

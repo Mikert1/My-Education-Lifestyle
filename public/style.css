@@ -1,4 +1,5 @@
 /* Algemeen */
+/* test */
 body,
 html {
     margin: 0;
@@ -7,6 +8,13 @@ html {
     background-color: #ececec;
     display: flex;
     flex-direction: column;
+}
+
+.Bodycoach {
+    flex-direction: row;
+    height: 26.8rem;
+    display: flex;
+    justify-content: center;
 }
 
 main {
@@ -145,8 +153,14 @@ embed {
     .nav-list {
         flex-direction: column;
         align-items: center;
+        height: 5rem;
     }
-    
+
+    .navbarObject {
+        min-height: 179px;
+        transition: all 0.5s ease-in-out;
+    }
+
     nav {
         height: auto;
         flex-direction: column;
@@ -182,7 +196,7 @@ embed {
     }
 
     .nav-list.active {
-        height: 251px;
+        height: 261px;
     }
 
     nav a {
@@ -196,6 +210,7 @@ embed {
         height: 40px;
         margin-right: 9.5rem;
         position: unset;
+        margin-top: 3rem;
     }
 
     .navbarObject.active {
@@ -288,9 +303,62 @@ footer {
     background-color: #76C5AF;
     color: #fff;
     text-align: center;
-    width: 100%;
-    padding: 20px;
-    height: 100px;
+    padding: 2rem;
+}
+
+
+
+footer img {
+    width: auto;
+    height: 50px;
+}
+
+.footernavigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.footernavigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.footernavigation a:hover {
+    color: #51A7D8;
+
+}
+
+footer li {
+    display: inline;
+}
+
+.footernavigation ul {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 1rem;
+}
+
+
+.icon svg {
+    transition: fill 0.3s;
+    fill: #fff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.icon:hover svg {
+    fill: #51A7D8;
+
 }
 
 .footerobject {
@@ -317,6 +385,7 @@ footer {
     width: 100%;
     object-fit: cover;
     max-height: 30rem;
+    top: 0%;
 }
 
 .text-overlay {
@@ -436,7 +505,7 @@ footer {
 /* Formulier */
 .contactformulier {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 10%;
@@ -447,7 +516,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: auto;
+    width: 40%;
     height: auto;
     border: #51A7D8 solid 3px;
     border-radius: 2rem;
@@ -463,7 +532,7 @@ footer {
     border-radius: 2rem;
     padding: 2rem;
     box-sizing: border-box;
-    margin: 0 auto;
+
 }
 
 .contactformulier h2 {
@@ -759,14 +828,12 @@ footer {
 }
 
 @media (max-width: 600px) {
-    #Bodycoach {
+    .morecards {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
         flex-direction: row;
-        margin-left: 10rem;
     }
-    
+
     #sectioncoach {
         display: flex;
         flex-direction: row;
@@ -777,10 +844,11 @@ footer {
         border-radius: 10px;
         border: #51A7D8 solid 3px;
     }
-    
+
     .Coachobject {
         height: 29rem;
     }
+
     .contactformulier {
         display: flex;
         justify-content: center;
@@ -791,10 +859,12 @@ footer {
         margin-left: 0%;
         margin-right: 0%;
     }
+
     .contactformulier img {
-        width: 100%;
+        width: calc(100% - 5px);
         margin: 0%;
     }
+
     .form {
         min-width: 20rem;
         max-width: 10rem;
@@ -810,18 +880,18 @@ footer {
         margin-left: 0%;
         margin-right: 0%;
     }
-    
+
     .info2 {
         display: block;
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    
+
     .textimage2 {
         width: 100%;
         margin: 0%;
     }
-    
+
     .textarea2 {
         min-width: fit-content;
         max-width: fit-content;
@@ -852,10 +922,73 @@ footer {
         flex-direction: column-reverse;
         margin-bottom: 2rem;
     }
+
+    .aboutus {
+        display: flex;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abouttext {
+        width: 90%;
+        border: #51A7D8 solid 3px;
+        margin-right: 0rem;
+        border-radius: 3rem;
+        padding: 1rem;
+
+    }
+
+    .aboutus img {
+        width: 90%;
+        margin-top: 1rem;
+        border: #51A7D8 solid 3px;
+        height: auto;
+        margin-left: 0rem;
+        border-radius: 3rem;
+    }
+
+    .contact {
+        display: flex;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacttext {
+        width: 90%;
+        border: #51A7D8 solid 3px;
+        margin-right: 0rem;
+        border-radius: 3rem;
+        padding: 1rem;
+
+    }
+
+    .footernavigation {
+        display: none;
+    }
+
+    footer svg {
+        margin-top: 2rem;
+    }
+
+    footer a {
+        text-decoration: none;
+
+    }
+
+    .icon-container {
+        border-top: #fff solid 2px;
+        margin-top: 2rem;
+    }
+
     .footerobject {
         min-height: 227px;
     }
-       
 }
 
 /* admin */
