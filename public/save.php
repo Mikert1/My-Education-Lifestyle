@@ -87,7 +87,7 @@ if ($_POST["EDITID"] === "new") {
 
 $newText = json_encode($texts, JSON_PRETTY_PRINT);
 
-var_dump(file_put_contents('src/coaches.json', $newText));
+var_dump(file_put_contents(__DIR__ . '/src/coaches.json', $newText));
 
 echo $newText;
 

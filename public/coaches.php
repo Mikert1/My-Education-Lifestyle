@@ -54,7 +54,7 @@ for ($i = 1; $i <= 20; $i++) {
 
 $newText = json_encode($texts, JSON_PRETTY_PRINT);
 
-file_put_contents('src/texts.json', $newText);
+file_put_contents(__DIR__ . '/src/texts.json', $newText);
 
 echo $newText;
 

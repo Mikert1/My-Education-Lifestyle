@@ -1,5 +1,7 @@
 .htaccess
 .DS_Store
+src/texts.json
+src/coaches.json
 *.DS_Store
 .idea/
 *.iml
