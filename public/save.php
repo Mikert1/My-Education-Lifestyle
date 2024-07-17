@@ -1,30 +1,24 @@
-<!DOCTYPE html>
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+// Get the data from the request
+$data = json_decode($_POST['data'], true);
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo 'Method not allowed';	
-    http_response_code(405);
-    die;
-}
+// Read the existing coaches data from the file
+$coachesData = file_get_contents('coaches.json');
+$coaches = json_decode($coachesData, true);
 
-if (!isset($_POST['password'])) {
-    echo 'Password is required';
-    http_response_code(400);
-    die;
-}
+// Add the new data to the coaches array
+$coaches[] = $data;
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
+// Convert the coaches array back to JSON
+$coachesData = json_encode($coaches);
 
-$password = $_ENV['FILE_UPLOAD_PASSWORD'];
+// Save the updated coaches data to the file
+file_put_contents('coaches.json', $coachesData);
 
-if ($_POST['password'] !== $password) {
-    echo 'Password is incorrect';
-    http_response_code(401);
-    die;
-}
+// Send a response back to the client
+$response = ['message' => 'Data saved successfully'];
+echo json_encode($response);
 
 $texts = json_decode(file_get_contents('src/coaches.json'), true);
 

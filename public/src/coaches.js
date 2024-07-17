@@ -30,10 +30,8 @@ async function getData() {
         throw error;
     }
 }
-let count = 0;
 const promise = getData()
 const template = document.getElementById("coach");
-const coachid = document.getElementById("Coachid");
 promise.then(data => {
     for (let i = 0; i < data.length; i++) {
         console.log(data[i].specialty);
@@ -41,20 +39,10 @@ promise.then(data => {
             count++;
             console.log(count);
             const cartDivName = template.content.cloneNode(true);
-            
             cartDivName.querySelector("#naam").textContent = data[i].name;
             cartDivName.querySelector("#image").src = data[i].image;
             cartDivName.querySelector("#specialty").textContent = data[i].specialty;
-            cartDivName.querySelector(".card").addEventListener("click", function() {
-                top.location.href = `../info.html?id=${data[i].id}`;
-            });
             document.body.appendChild(cartDivName);
         }
-    }
-    if (count == 1) {
-        coachid.classList.add("singelcard");
-    }
-    else {
-        coachid.classList.add("morecards");
     }
 })

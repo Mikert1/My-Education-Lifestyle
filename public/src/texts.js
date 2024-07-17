@@ -20,11 +20,7 @@ getData()
                 element = document.getElementById(i);
                 for (let j = 0; j < data.length; j++) {
                     if (element.id == data[j].id) {
-                        if (i > 30) {
-                            element.src = data[j].text;
-                        } else {
-                            element.textContent = data[j].text;
-                        }
+                        element.textContent = data[j].text;
                     }
                 }
             }

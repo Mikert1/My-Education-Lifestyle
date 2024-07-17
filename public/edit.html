@@ -12,46 +12,26 @@
         <form action="save.php" method="post" class="editlayout">
             <div class="editQuickinfo">
                 <div class="editimage">
-                    <div class="border-green">
-                        <img id="EDITIMAGE" src="" alt="">
-                    </div>
+                    <img id="EDITIMAGE" src="" alt="">
                 </div>
                 <div class="editImportant">
-                    <div class="border-blue">
-                        <input type="hidden" name="EDITID" id="EDITID">
-                        <label for="EDITNAME">Name</label>
-                        <input name="EDITNAME" id="EDITNAME"></input>
-                        <label for="EDITCOMPANY">Company</label>
-                        <input name="EDITCOMPANY" id="EDITCOMPANY"></input>
-                        <label for="EDITSPECIALTY">specialty</label>
-                        <select name="EDITSPECIALTY" id="EDITSPECIALTY">
-                            <option value="Mental health">Mental health</option>
-                            <option value="Education">Education</option>
-                        </select>
-                        <label for="EDITSOURCE">source</label>
-                        <input name="EDITSOURCE" type="text" id="EDITSOURCE"></input>
-                    </div>
+                    <label for="EDITNAME">Name</label>
+                    <input id="EDITNAME"></input>
+                    <label for="EDITSPECIALTY">specialty</label>
+                    <input id="EDITSPECIALTY"></input>
+                    <label for="EDITSOURCE">source</label>
+                    <input type="text" id="EDITSOURCE"></input>
                 </div>
             </div>
             <div class="editAll">
-                <div class="border-blue">
-                    <label for="EDITPHONE">Phone number</label>
-                    <input name="EDITPHONE" id="EDITPHONE">
-                    <label for="EDITEMAIL">Email</label>
-                    <input type="email" name="EDITEMAIL" id="EDITEMAIL">
-                    <label for="EDITWEBSITE">Website</label>    
-                    <input type="text" name="EDITWEBSITE" id="EDITWEBSITE">
-                    <label for="EDITLOCATION">Location</label>
-                    <input type="text" name="EDITLOCATION" id="EDITLOCATION">
-                    <label for="EDITDISABLE">Disabled</label>
-                    <input name="EDITDISABLE" type="checkbox" id="EDITDISABLE" value="Disabled">
-                    <label for="EDITDELETE">Delete On Save</label>
-                    <input name="EDITDELETE" type="checkbox" id="EDITDELETE" value="Deleted">
-                    <label for="password">Password</label>
-                    <input type="password" name="password">
-                    <label for="EDITSAVE">Save Changes</label>
-                    <input type="submit" id="EDITSAVE" value="Save">
-                </div>
+                <label for="EDITPHONE">Phone number</label>
+                <input id="EDITPHONE">
+                <label for="EDITEMAIL">Email</label>
+                <input id="EDITEMAIL">
+                <label for="EDITDISABLE">Disabled</label>
+                <input type="button" id="EDITDISABLE">
+                <label for="EDITSAVE">Save Changes</label>
+                <input type="submit" id="EDITSAVE" value="Save">
             </div>
         </form>
     </div>
