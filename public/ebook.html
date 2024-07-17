@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lifestyle Education | E-Books</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="src/pdf.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodyebooks">
+    <object data="object/navbar.html" class="navbarObject" id="navbarObject"></object>
+    <div class="ebookFlex">
+        <div class="divRelative">
+            <div id="pdfViewer1" class="pdfViewer"></div>
+            <div id="navigation1" class="Ebook-button">
+                <button onclick="NextPage('prev', 'pdfViewer1')" class="outline">prev</button>
+                <p id="PageNumber1"></p>
+                <p>/</p>
+                <p id="TotalPages1"></p>
+                <button onclick="NextPage('next', 'pdfViewer1')" class="outline">next</button>
+            </div>
+        </div>
+        <div class="divRelative">
+            <div id="pdfViewer2" class="pdfViewer"></div>
+            <div id="navigation2" class="Ebook-button">
+                <button onclick="NextPage('prev', 'pdfViewer2')" class="outline">prev</button>
+                <p id="PageNumber2"></p>
+                <p>/</p>
+                <p id="TotalPages2"></p>
+                <button onclick="NextPage('next', 'pdfViewer2')" class="outline">next</button>
+            </div>
+        </div>
+    </div>
+    <object data="object/footer.html" class="footerobject"></object>    
+</body>
+</html>
