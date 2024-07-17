@@ -33,7 +33,10 @@ nav {
     height: 100px;
     flex-wrap: wrap;
 }
-
+.navbarObject {
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+}
 nav a {
     color: #fff;
     text-decoration: none;
@@ -361,7 +364,7 @@ footer li {
 .footerobject {
     margin-top: 0px;
     width: 100%;
-    min-height: 280px;
+    min-height: 261px;
 }
 
 /* Home */
