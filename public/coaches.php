@@ -58,4 +58,4 @@ file_put_contents(__DIR__ . '/src/texts.json', $newText);
 
 echo $newText;
 
-// header('location: /index.html');
+header('location: /index.html');
